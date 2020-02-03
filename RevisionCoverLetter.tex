@@ -1,0 +1,242 @@
+\documentclass[11pt]{letter}
+
+\usepackage[hmargin={1.0in,1.0in},%
+            vmargin={1.0in,1.0in},%
+            nohead,%
+            nofoot,%
+            ]{geometry}                                 % the page layout without fancyhdr
+\pagestyle{empty}
+
+\begin{document}
+\address{Ross Parker \\
+Division of Applied Mathematics \\
+Brown University \\
+Providence, RI 02912 \\
+\texttt{ross\_parker@brown.edu}}%
+\signature{Ross Parker}
+\begin{letter}{Editor, SIMA}
+
+\opening{Dear Editor,}
+
+On behalf of my co-authors, Todd Kapitula and Bj\"orn Sandstede, I would like to submit our revision of the article ``A reformulated Krein matrix for star-even polynomial operators with applications'' for consideration of publication in SIAM J. Math. Anal..
+
+We are grateful to the referees for their careful reading of the manuscript, and their comments and suggestions regarding how we could improve it. Below, we address each reviewer's comments point-by-point.
+
+Reviewer 1
+\begin{enumerate}
+
+\item \emph{Page 2, lines 62–63. On line 62 the matrix $iP_n'$ is discussed but line 63 refers to $-i\lambda_0 P_n'$.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 2, line 67. The derivation of the centered formula on line 67 is not completely obvious. The authors derive it in Section 2.2. I suggest they include a note ``see Section 2.2 for more details''.}
+\vspace{4mm}
+
+The text ``see subsection 2.2 for more details'' is added after the formula on line 67.
+
+\item \emph{Page 3, lines 76–82 the authors describe the Hamiltonian-Hopf bifurcation, and refer in case of $n = 1$ to the literature. I would suggest to add that for the general case of star-even polynomials $(n \geq 2)$ the bifurcation has not been studied in detail (at least I am not aware of such literature, if the authors have some reference, they should add it).}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 3, line 87. The distinction between the two cases considered on lines 87–93 and then on lines 94–110 is not easily recognizable from the text. I suggest to add a sentence somewhere on lines 83–87 that will explain that two cases $A_0$ nonsingular and singular will be discussed separately to make the reader aware of it.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 10, line 329. The redefinition of the Krein matrix introduces a new zero/singular point at $z = 0$. The text should briefly explain why such singularity is irrelevant in the studied case.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 10, Theorem 3.1. I recommend to change the notation of the itemization (a)–(b) (lines 349-350) and then once again (a)–(b) (lines 359–362).}
+\vspace{4mm}
+
+Todd. (I am not sure exactly what this comment means and what the reviewer suggests it should be changed to.)
+
+\item \emph{Page 12, lines 401–403. The relation between $c$ and $c_0$ is missing.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 12, lines 419–420. The authors claim that their method can be easily adopted to cover second-order-in-time systems. However, they do not even suggest how the problems with the rigorous justification of the continuity of the spectrum would be resolved. They have already removed one of the related examples from the original manuscript but the claim remained.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 13, lines 444 and 446. The Bloch decomposition introduces the term $\partial y + i \mu$ instead of $\partial y + i u$. This was already pointed out in my previous review.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 13, lines 456–460. The authors make claims about the smoothness of the spectrum on parameters. They need to provide detailed references for these claims.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 14, line 472. The authors should at least briefly explain why $d(+1,\mu)d(-1,\mu) < 0$ for small $\mu$ implies $n(A_0) \geq 1$, at least referring to the relation (4.8). The same is true for the claim on line 478, $n(A_0) = q$.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 14, line 489. It would be useful if the claim about non-removable poles for $\epsilon > 0$ would be explained at least briefly.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 14, lines 500–501. I suggest to add a note that the case in Remark 4.2 corresponds to the case $\epsilon = 0$.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Pages 14-15, lines 502-550. There is a whole page of the text that describes the bifurcation scenario for $\epsilon = 0$ and its perturbation for $\epsilon > 0$ as that is a novel contribution. One page later in Remark 4.4 (page 16) in one paragraph there is a reference to the literature that provides a full explanation of the observed phenomenon (except the details about Krein matrix). The correct way to present scientific results is to first inform the reader about the previously established results and then to present own results and compare them with the literature, potentially with emphasis on a new knowledge gained. The authors should clearly state what new results in Section 4 they obtained compared to [8, 23, 35].}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 18, lines 609–610. It is not specified what is $A_0$ in the presented example.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 18, lines 611–613. The value of $\mu_{ch}$ may depend on $\epsilon$, so the formula for $n(A_0)$ generically changes with $\epsilon$ for some values of $\mu$.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 20, lines 644–645. I do not understand the claim in the sentence ``Since this value ... are purely real.'' Perhaps a typo.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Page 21, lines 672–673. The centered identity does not rely on the fact that $P_{S^\perp}$ is a spectral projection.}
+
+This has been removed.
+
+\item \emph{Page 21, lines 677. The operator norm is used without specification of the underlying functional space.}
+\vspace{4mm}
+
+Todd. Since this is a generic setting with Hilbert space $X$, are we just using the norm induced from the inner product?
+
+\item \emph{Page 21, lines 691, 694–695. The correct assumption should be $|z| < 1/C_0$. This was already pointed out in my previous review.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 22, line 711. The term ``bracketed part'' should directly refer to formula (line 693).}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 23, line 742. In Example 6, the Hilbert space $X$ considered was not specified in the text, neither the norm $||\cdot||$ that is used throughout the section.}
+\vspace{4mm}
+
+The Hilbert space is now specified for the linear operator $A_0(U^*)$ (equation (6.6)). The Hilbert space is also specified for the operator $\mathcal{P}_2(\lambda; U_n)$ (equation (6.14)). All norms and inner products that will be used in the section are specified before the statement of Theorem 6.4.
+
+\item \emph{Page 24, line 778. The authors refer to numerical evidence. They should be more specific. Is it their own numerical evidence?}
+\vspace{4mm}
+
+It is our own numerical evidence. I added text to make that clear.
+
+\item \emph{Page 25, line 815. Later in the text the authors use an additional estimate for $||\partial_x w||_\infty$. I recommend to add it in to the text of Theorem 6.4.}
+\vspace{4mm}
+
+Theorem 6.4 states that the bounds for $r$ and $w_j$ hold for all derivatives with respect to $x$. As recommended by the reviewer, I have added the particular case of $||\partial_x w||_\infty$, since that is used later.
+
+\item \emph{Page 27, line 888. The derivative of $c||\partial_x U||^2$ with respect to $c$ is used here. The authors should briefly explain how the required smoothness of the term follows from Hypothesis 6.1., particularly why $U_{xc}$ is smooth.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 32, line 1076. It should be shortly explained how the factors $||\partial_x Un||^2$ appear in the two terms on the right hand side.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 33, line 1090. A comma between $U^-$ and $U^+$ is missing.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 34, lines 1105 and 1108. The notation should be changed from $q^\pm$ to $U^\pm$.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 35, line 1118. Typo in the first term on the right hand side $\partial_x U_x^m$.}
+\vspace{4mm}
+
+Fixed.
+
+\item \emph{Page 35, line 1135. If it is not hard to show the authors should provide a brief argument.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 37, lines 1169–1170. I do not see how substituing (6.40) into (6.39) leads to (6.42). Particularly it is unclear to me how the outside projection term was removed.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 37, lines 1179–1181. The function $W_j^\pm$ are not defined on disjoint intervals. Perhaps the zero end points should be replaced by a an arbitrary point inside the interval $(-X_{j-1},X_j)$.}
+\vspace{4mm}
+
+This is correct. The domains of the functions $W_j^\pm(x)$ do in fact overlap at their endpoints. This is now made clear in the text. Using a standard implementation of Lin's method, we solve the system (6.44). The second and third equations in (6.44) are matching conditions for these functions at the endpoints. (I MAY NEED TO BETTER EXPLAIN LIN'S METHOD.)
+
+\item \emph{Page 37, line 1183. What is $H(x)$? Explain.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 38, line 1216. It is not at all clear to me why $\partial_x^2 U^m$ and $\partial_c U^l$ are exponentially separated. I believe this requires some knowledge of dependence of $U$ on $c$.}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 39, line 1223. The same. This is even more mysterious, as $\partial_x U$ is odd and $\partial_c U$ is even. Why are these exponentially separated? Cannot their peaks after taking the derivatives coincide?}
+\vspace{4mm}
+
+Ross.
+
+\item \emph{Page 39, line 1234. I do not see how the factor $2c$ (line 1233) changed to $c$ (line 1234).}
+\vspace{4mm}
+
+This is a typo and has been fixed.
+
+\end{enumerate}
+
+Reviewer 2
+\begin{enumerate}
+\item \emph{You mention the notion of stability early without explaining.}
+\vspace{4mm}
+
+Todd.
+
+\item \emph{Instability bubble was mentioned on line 327, but not explained until line 510.}
+
+Todd.
+
+\item \emph{What is sideband instability?} 
+
+Todd.
+
+\item \emph{Why is knowing small eigenvalues important?}
+
+Todd/Ross.
+
+\item \emph{Is the main goal of the entire analysis to obtain a graph of Krein eigenvalues as mentioned on line 327? If so, how does this compare to the Kollar and Miller paper (reference 24). }
+
+Todd.
+
+\item \emph{Does the form of the matrix on line 197 or line 275 or line 329 help with showing existence of solutions as well as spectral stability?}
+
+Todd/Ross.
+
+\end{enumerate}
+
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
