@@ -2159,13 +2159,58 @@ An equilibrium solution to \cref{suspc} satisfies the ODE,
 \begin{equation}\label{eqODE}
 \partial_x^4u +  c^2\partial_x^2u + \rme^{u} - 1 = 0.
 \end{equation}
-Smets and van den Berg \cite[Theorem 11]{Smets2002} prove the existence of a localized, symmetric solution $U(x)$ to \cref{eqODE} for almost all wavespeeds $c \in (0, \sqrt{2})$. van den Berg et.al. \cite[Theorem~1]{Berg2018} use a computer-assisted proof technique to show existence of such solutions to \cref{eqODE} for all speeds $c$ with $c^2 \in [0.5, 1.9]$. We take the following hypothesis.
+Smets and van den Berg \cite[Theorem 11]{Smets2002} prove the existence of a localized, symmetric solution $U(x)$ to \cref{eqODE} for almost all wavespeeds $c \in (0, \sqrt{2})$. van den Berg et.al. \cite[Theorem~1]{Berg2018} use a computer-assisted proof technique to show existence of such solutions to \cref{eqODE} for all speeds $c$ with $c^2 \in [0.5, 1.9]$. 
 
+Equation \cref{eqODE} can be written as a first-order system in the standard way as 
+\begin{equation}\label{suspsystem}
+Y' = F(Y; c),
+\end{equation}
+where $Y = (y_1, y_2, y_3, y_4) = (u, \partial_x u, \partial_x^2 u, \partial_x^3 u)$ and $F: \R^4 \times \R \rightarrow \R^4$, given by
+\begin{equation}\label{suspF}
+F(y_1, y_2, y_3, y_4; c) = (y_2, y_3, y_4, -c^2 y_3 - \rme^{y_1} + 1),
+\end{equation}
+is smooth. Equation \cref{suspsystem} is Hamiltonian with energy $H:\R^4 \times \R \rightarrow \R$ given by
+\begin{equation}\label{suspH}
+H(Y; c) = y_2 y_4 - \frac{1}{2}y_3^2 + \frac{c^2}{2}y_2^2 + \rme^{y_1} - y_1.
+\end{equation}
+We note that for all $c \in (0, \sqrt{2})$, $Y = 0$ is a hyperbolic equilibrium of \cref{suspsystem}, and the spectrum of $DF(0; c)$ is the quartet of eigenvalues
+\begin{align}\label{specA00}
+\mu = \pm \sqrt{\frac{-c^2 \pm \sqrt{c^4 - 4}}{2} } = \pm \alpha \pm \rmi\beta,
+\end{align}
+for $\alpha, \beta > 0$. Thus the equilibrium at 0 has a two-dimensional stable manifold $W^s(0; c)$ and two-dimensional unstable manifold $W^u(0; c)$.
+
+We take the following hypothesis concerning the existence of a localized, symmetric, primary pulse solution to \cref{suspsystem}.
 \begin{hypothesis}\label{Uexistshyp}
-An exponentially localized primary pulse solution $U(x; c)$ exists to \cref{eqODE} for each wavespeed $c \in (0, \sqrt{2})$ and is smooth in the wavespeed.
+For some $c_0 \in (0, \sqrt{2})$, there exists a homoclinic orbit solution $Y(x; c_0) \in W^s(0; c_0) \cap W^u(0; c_0) \subset H^{-1}(0; c_0)$ to \cref{suspsystem}. Furthermore, the stable manifold $W^s(0; c_0)$ and the unstable manifold $W^u(0; c_0)$ intersect transversely in $H^{-1}(0; c_0)$ at $Y(0; c_0)$. In addition,
+\begin{enumerate}
+\item $Y(0; c_0) \neq 0$
+\item $\nabla_Y H(Y(0; c_0); c_0) \neq 0$
+\item $Y(x; c_0)$ is symmetric with respect to the standard reversor operator $R$, i.e. $Y(-x; c_0) = R Y(x; c_0)$, where $R: \R^4 \rightarrow \R^4$ is defined by
+\[
+R(y_1, y_2, y_3, y_4) = (y_1, -y_2, y_3, -y_4)
+\]
+\end{enumerate}
 \end{hypothesis}
 
-For the remainder of this section, we will fix $c \in (0, \sqrt{2})$ and write the primary pulse solution corresponding to wavespeed $c$ as $U(x)$. We are interested in the existence and stability of multi-pulse equilibrium solutions to \cref{suspc}. A multi-pulse is a localized, multi-modal solution $U_n(x)$ to \cref{eqODE} which resembles multiple, well-separated copies of the primary pulse $U(x)$.
+We have the following result, which proves the existence of homoclinic orbits $Y(x; c)$ for $c$ near $c_0$.
+
+\begin{lemma}\label{lemma:cinterval}
+Assume \cref{Uexistshyp}. Then there exists an open interval $(c_-, c_+)$ containing $c_0$ such that for all $c \in (c_-, c_+)$, the stable and unstable manifolds $W^s(0; c)$ and $W^u(0; c)$ have a one-dimensional transverse intersection in $H^{-1}(0; c)$ which is a homoclinic orbit $Y(x; c)$. $Y(x; c)$ is symmetric with respect to the standard reversor operator $R$, and the map $c \mapsto Y(x; c)$ from $(c_-, c_+)$ to $C(\R, \R^4)$ is smooth.
+\end{lemma}
+\begin{proof}
+Briefly, it follows from the implicit function theorem that for $c$ close to $c_0$, the 0-level set $H^{-1}(0; c)$ contains a smooth 3-dimensional manifold $K(c)$, with $K(c_0)$ containing $Y(0; c_0)$. The result follows from the transverse intersection of $W^s(0; c_0)$ and $W^u(0; c_0)$ in $K(c_0) \subset H^{-1}(0; c_0)$, the smoothness of $F$, and the implicit function theorem. Symmetry with respect to the reversor $R$ follows from symmetry of $Y(0; c_0)$ and the reversibility of \cref{suspsystem}.
+\end{proof}
+
+Given the existence results of \cite{Smets2002,Berg2018} and our own numerical analysis, we take the following hypothesis concerning the interval $(c_-, c_+)$ in \cref{lemma:cinterval}.
+\begin{hypothesis}
+In \cref{lemma:cinterval}, $(c_-, c_+) = (0, \sqrt{2})$.
+\end{hypothesis}
+
+For $c \in (0, \sqrt{2})$, let
+\begin{equation}\label{suspU}
+U(x; c) = y_1(x; c).
+\end{equation}
+Then $U(x; c)$ is an even function and is an exponentially localized traveling wave solution solution to \cref{suspc}. For the remainder of this section, we will fix $c \in (0, \sqrt{2})$ and write the primary pulse solution corresponding to wavespeed $c$ as $U(x)$. We are interested in the existence and stability of multi-pulse equilibrium solutions to \cref{suspc}. A multi-pulse is a localized, multi-modal solution $U_n(x)$ to \cref{eqODE} which resembles multiple, well-separated copies of the primary pulse $U(x)$.
 
 \subsection{Existence of pulses}
 
@@ -2173,12 +2218,12 @@ First, we look at the existence of such pulses. The linearization of \cref{eqODE
 \begin{equation}\label{defA0}
 \calA_0(U^*) = \partial_x^4 + c^2 \partial_x^2 + \rme^{U_*}.
 \end{equation}
-We take the following hypothesis concerning $\calA_0(U)$.
+It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. We take the following additional hypothesis concerning the point spectrum of $\calA_0(U)$.
 
 \begin{hypothesis}\label{A0hyp}
 On the space $L^2(\R)$, the point spectrum of $\calA_0(U)$ consists of exactly two eigenvalues:
 \begin{enumerate}
-\item $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$.
+\item A simple eigenvalue at 0 with eigenfunction $\partial_x U(x)$.
 \item $\rmn[\calA_0(U)]=1$, i.e. $\calA_0(U)$ has a unique, simple negative eigenvalue $\lambda_-$.
 \end{enumerate}
 \end{hypothesis}
@@ -2186,15 +2231,7 @@ On the space $L^2(\R)$, the point spectrum of $\calA_0(U)$ consists of exactly t
 \begin{remark}While the results below hold if we only make assumptions on the nonnegative point spectrum of $\calA_0(U)$, we have obtained strong numerical evidence to support \cref{A0hyp} is supported by numerical evidence. For simplicity, we make assumptions on the entire point spectrum of $\calA_0(U)$.
 \end{remark}
 
-From this hypothesis, it follows that the primary pulse $U(x)$ is transversely constructed in the ODE phase space. Before stating our theorem, we will also need the following result. For $c \in (0, \sqrt{2})$, the solutions to the constant-coefficient equation,
-\[
-\calA_0(0)v = \partial_x^4 v + c^2 \partial_x^2 v + 1 = 0,
-\]
-are given by $v = \rme^{\mu x}$, where
-\begin{align}\label{specA00}
-\mu = \pm \sqrt{\frac{-c^2 \pm \sqrt{c^4 - 4}}{2} } = \pm \alpha \pm \rmi\beta,
-\end{align}
-for $\alpha, \beta > 0$. The constant $\alpha$ is the exponential decay rate of localized solutions to \cref{eqODE}. We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
+We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
 
 \begin{theorem}\label{multiexist}
 Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ such that:
@@ -2249,11 +2286,7 @@ Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $
 \end{theorem}
 
 \begin{proof}
-Equation \cref{eqODE} is Hamiltonian with energy
-\begin{equation}\label{defH}
-H(u) = \left(\partial_xu\right)\left(\partial_x^4 u\right) - \frac{1}{2}\left(\partial_x^2u\right)^2 + \frac{c^2}{2}\left(\partial_xu\right)^2 + \rme^u - u.
-\end{equation}
-Using \cref{specA00}, \cref{defH}, the assumption that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has exactly $n$ eigenvalues near each eigenvalue of $\calA_0(U)$, i.e. $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
+Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has exactly $n$ eigenvalues near each eigenvalue of $\calA_0(U)$, i.e. $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
 \end{proof}
 
 \subsection{Stability of pulses}
