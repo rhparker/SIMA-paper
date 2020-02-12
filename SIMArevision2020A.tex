@@ -2159,7 +2159,7 @@ An equilibrium solution to \cref{suspc} satisfies the ODE,
 \begin{equation}\label{eqODE}
 \partial_x^4u +  c^2\partial_x^2u + \rme^{u} - 1 = 0.
 \end{equation}
-Smets and van den Berg \cite[Theorem 11]{Smets2002} prove the existence of a localized, symmetric solution $U(x)$ to \cref{eqODE} for almost all wavespeeds $c \in (0, \sqrt{2})$. van den Berg et.al. \cite[Theorem~1]{Berg2018} use a computer-assisted proof technique to show existence of such solutions to \cref{eqODE} for all speeds $c$ with $c^2 \in [0.5, 1.9]$. 
+Smets and van den Berg \cite[Theorem 11]{Smets2002} prove the existence of a localized, symmetric solution $U(x)$ to \cref{eqODE} for almost all wavespeeds $c \in (0, \sqrt{2})$. Van den Berg et al. \cite[Theorem~1]{Berg2018} use a computer-assisted proof technique to show existence of such solutions to \cref{eqODE} for all speeds $c$ with $c^2 \in [0.5, 1.9]$. 
 
 Equation \cref{eqODE} can be written as a first-order system in the standard way as 
 \begin{equation}\label{suspsystem}
@@ -2169,7 +2169,12 @@ where $Y = (y_1, y_2, y_3, y_4) = (u, \partial_x u, \partial_x^2 u, \partial_x^3
 \begin{equation}\label{suspF}
 F(y_1, y_2, y_3, y_4; c) = (y_2, y_3, y_4, -c^2 y_3 - \rme^{y_1} + 1),
 \end{equation}
-is smooth. Equation \cref{suspsystem} is Hamiltonian with energy $H:\R^4 \times \R \rightarrow \R$ given by
+is smooth. Furthermore, $F$ has the reversible symmetry $F(R(Y)) = -R(F(Y))$, where $R: \R^4 \rightarrow \R^4$ is the standard reversor operator defined by
+\[
+R(y_1, y_2, y_3, y_4) = (y_1, -y_2, y_3, -y_4).
+\]
+
+Equation \cref{suspsystem} is Hamiltonian with energy $H:\R^4 \times \R \rightarrow \R$ given by
 \begin{equation}\label{suspH}
 H(Y; c) = y_2 y_4 - \frac{1}{2}y_3^2 + \frac{c^2}{2}y_2^2 + \rme^{y_1} - y_1.
 \end{equation}
@@ -2181,36 +2186,80 @@ for $\alpha, \beta > 0$. Thus the equilibrium at 0 has a two-dimensional stable 
 
 We take the following hypothesis concerning the existence of a localized, symmetric, primary pulse solution to \cref{suspsystem}.
 \begin{hypothesis}\label{Uexistshyp}
-For some $c_0 \in (0, \sqrt{2})$, there exists a homoclinic orbit solution $Y(x; c_0) \in W^s(0; c_0) \cap W^u(0; c_0) \subset H^{-1}(0; c_0)$ to \cref{suspsystem}. Furthermore, the stable manifold $W^s(0; c_0)$ and the unstable manifold $W^u(0; c_0)$ intersect transversely in $H^{-1}(0; c_0)$ at $Y(0; c_0)$. In addition,
-\begin{enumerate}
-\item $Y(0; c_0) \neq 0$
-\item $\nabla_Y H(Y(0; c_0); c_0) \neq 0$
-\item $Y(x; c_0)$ is symmetric with respect to the standard reversor operator $R$, i.e. $Y(-x; c_0) = R Y(x; c_0)$, where $R: \R^4 \rightarrow \R^4$ is defined by
-\[
-R(y_1, y_2, y_3, y_4) = (y_1, -y_2, y_3, -y_4)
-\]
-\end{enumerate}
+For some $c_0 \in (0, \sqrt{2})$, there exists a nontrivial, symmetric homoclinic orbit solution $Y(x; c_0) \in W^s(0; c_0) \cap W^u(0; c_0) \subset H^{-1}(0; c_0)$ to \cref{suspsystem}. Furthermore, the stable manifold $W^s(0; c_0)$ and the unstable manifold $W^u(0; c_0)$ intersect transversely in $H^{-1}(0; c_0)$ at $Y(0; c_0)$.
 \end{hypothesis}
 
 We have the following result, which proves the existence of homoclinic orbits $Y(x; c)$ for $c$ near $c_0$.
 
 \begin{lemma}\label{lemma:cinterval}
-Assume \cref{Uexistshyp}. Then there exists an open interval $(c_-, c_+)$ containing $c_0$ such that for all $c \in (c_-, c_+)$, the stable and unstable manifolds $W^s(0; c)$ and $W^u(0; c)$ have a one-dimensional transverse intersection in $H^{-1}(0; c)$ which is a homoclinic orbit $Y(x; c)$. $Y(x; c)$ is symmetric with respect to the standard reversor operator $R$, and the map $c \mapsto Y(x; c)$ from $(c_-, c_+)$ to $C(\R, \R^4)$ is smooth.
+Assume \cref{Uexistshyp}. Then there exists an open interval $(c_-, c_+)$ containing $c_0$ such that for all $c \in (c_-, c_+)$ the stable and unstable manifolds $W^s(0; c)$ and $W^u(0; c)$ have a one-dimensional transverse intersection in $H^{-1}(0; c)$ which is a homoclinic orbit $Y(x; c)$. $Y(x; c)$ is symmetric with respect to the standard reversor operator $R$, and the map $c \mapsto Y(x; c)$ from $(c_-, c_+)$ to $C(\R, \R^4)$ is smooth.
 \end{lemma}
 \begin{proof}
-Briefly, it follows from the implicit function theorem that for $c$ close to $c_0$, the 0-level set $H^{-1}(0; c)$ contains a smooth 3-dimensional manifold $K(c)$, with $K(c_0)$ containing $Y(0; c_0)$. The result follows from the transverse intersection of $W^s(0; c_0)$ and $W^u(0; c_0)$ in $K(c_0) \subset H^{-1}(0; c_0)$, the smoothness of $F$, and the implicit function theorem. Symmetry with respect to the reversor $R$ follows from symmetry of $Y(0; c_0)$ and the reversibility of \cref{suspsystem}.
+Briefly, $Y(0; c_0) \neq 0$, and it follows from the form of the Hamiltonian in \cref{suspH} that $\nabla_Y H(Y(0; c_0); c_0) \neq 0$. By the implicit function theorem, for $c$ close to $c_0$, the 0-level set $H^{-1}(0; c)$ contains a smooth 3-dimensional manifold $K(c)$, with $K(c_0)$ containing $Y(0; c_0)$. The result follows from the transverse intersection of $W^s(0; c_0)$ and $W^u(0; c_0)$ in $K(c_0) \subset H^{-1}(0; c_0)$, the smoothness of $F$, and the implicit function theorem. Symmetry with respect to the reversor $R$ follows from symmetry of $Y(0; c_0)$ and the reversibility of \cref{suspsystem}.
 \end{proof}
 
-Given the existence results of \cite{Smets2002,Berg2018} and our own numerical analysis, we take the following hypothesis concerning the interval $(c_-, c_+)$ in \cref{lemma:cinterval}.
-\begin{hypothesis}
-In \cref{lemma:cinterval}, $(c_-, c_+) = (0, \sqrt{2})$.
-\end{hypothesis}
+\begin{remark}We can choose $(c_-, c_+)$ to be the maximal open interval for which \cref{lemma:cinterval} holds. Given the existence results of \cite{Smets2002,Berg2018} and our own numerical analysis, it is likely that $(c_-, c_+) = (0, \sqrt{2})$. 
+\end{remark}
 
-For $c \in (0, \sqrt{2})$, let
+It follows from the stable manifold theorem that for $c \in (c_-, c_+)$, $Y(x; c)$ is exponentially localized, i.e. for any $\epsilon > 0$, 
+\begin{align}\label{Yexploc}
+|Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+\end{align}
+where $\alpha$ depends on $c$ and is given by \cref{specA00}. In the next lemma, we prove that $\partial_c Y(x; c)$ is also exponentially localized.
+
+\begin{lemma}$\partial_c Y(x; c)$ is also exponentially localized, i.e. for any $\epsilon > 0$, 
+\begin{align}\label{Ycexploc}
+|\partial_c Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+\end{align}
+\begin{proof}
+Fix $c \in (c_-, c_+)$. Since $Y(x; c)$ solves equation \cref{suspsystem}, $Y(x; c) \in C^1(\R, \R^4)$. Differentiating \cref{suspsystem} with respect to $c$, which we can do by \cref{lemma:cinterval}, we have
+\begin{equation}\label{Ycprime}
+Y_c'(x; c) = F_Y(Y(x;c); c) Y_c(x; c) + F_c(Y(x;c); c).
+\end{equation}
+It follows from the form of $F$ given in \cref{suspF} and \cref{Yexploc} that $F_c(Y(x;c); c)$ is exponentially localized, i.e. for any $\epsilon > 0$,
+\begin{align}\label{Fcexploc}
+|F_c(Y(x;c); c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+\end{align}
+
+Define the linear operator $\calL: C^1(\R, \R^4) \mapsto C^0(\R, \R^4)$ by
+\begin{equation}\label{suspdefL}
+\calL = \frac{d}{dx} - F_Y(Y(x;c); c).
+\end{equation}
+By equation \cref{Ycprime}, $F_c(Y(x;c); c) \in \Ran \calL$. By \cite[Lemma 4.2]{Palmer1984} and the roughness theorem for exponential dichotomies \cite{Coppel1978}, since $DF(0; c)$ is hyperbolic, $\calL$ is Fredholm with index 0. By \cref{Uexistshyp}, $\ker \calL = \Span\{U'(x; c)\}$, which is dimension 1. Thus the set of all bounded solutions to \cref{Ycprime} is $Y_c(x; c) + \R Y'(x; c)$.
+
+At this point, we recast the problem in an exponentially weighted space. Choose any $\epsilon > 0$ with $\epsilon < \alpha$. Let
+\begin{equation}\label{defYZ}
+Y(x; c) = Z(x; c) e^{-(\alpha - \epsilon)r(x)},
+\end{equation}
+where $r(x) = \eta(x) * |x|$ and $\eta(x)$ is the standard mollifier \cite[Section C.5]{Evans2010}. We note that $r(x)$ is smooth and that for $|x| > 1$, $r(x) = |x|$ and $r'(x) = 1$. Substituting \cref{defYZ} into \cref{Ycprime} and simplifying, we obtain the weighted equation
+\begin{equation}\label{Zcprime}
+Z_c'(x; c) = [F_Y(Y(x;c); c) + (\alpha - \epsilon) r'(x) ] Z_c(x; c) + e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c).
+\end{equation}
+By \cref{Fcexploc} and the definition of $r(x)$, $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c)$ is bounded. Define the weighted linear operator $\calL_{\alpha - \epsilon}: C^1(\R, \R^4) \mapsto C^0(\R, \R^4)$ by
+\begin{equation}\label{suspdefLalpha}
+\calL_{\alpha - \epsilon} = \frac{d}{dx} - F_Y(Y(x;c); c) - (\alpha - \epsilon) r'(x) \calI.
+\end{equation}
+Then $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$. Since the system \cref{suspsystem} with the substitution \cref{defYZ} still has a hyperbolic equilibrium point at 0, it follows again from \cite[Lemma 4.2]{Palmer1984} and the roughness theorem that $\calL_{\alpha - \epsilon}$ is Fredholm with index 0. Since $F(Y; c)$ is smooth, it follows from \cref{suspsystem} and \cref{Yexploc} that $Y'(x; c)$ is exponentially localized, with
+\begin{align}\label{Yprimeloc}
+|Y'(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+\end{align}
+Since $Y'(x; c) \in \ker \calL$ and $e^{(\alpha - \epsilon)r(x)} Y'(x; c)$ is bounded, it is straightforward to verify that $e^{(\alpha - \epsilon)r(x)} Y'(x; c) \in \ker \calL_{\alpha - \epsilon}$. Since $W(x) \in \ker \calL_{\alpha - \epsilon}$ implies $e^{-(\alpha - \epsilon)r(x)} W(x) \in \ker \calL$, and $e^{-(\alpha - \epsilon)r(x)} W(x)$ is bounded, it follows from \cref{Uexistshyp} that 
+\[
+\ker \calL_{\alpha - \epsilon} = \Span\{ e^{(\alpha - \epsilon)r(x)} Y'(x; c) \}
+\]
+Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c)$. This implies that $Z_c(x; c)$ is bounded. It follows from \cref{defYZ} that 
+\begin{align*}
+e^{-(\alpha - \epsilon)r(x)} Y(x; c) &\leq C && x \in \R
+\end{align*}
+The result \cref{Ycexploc} follows from this and the definition of $r(x)$.
+\end{proof}
+\end{lemma}
+
+For $c \in (c_-, c_+)$, let
 \begin{equation}\label{suspU}
 U(x; c) = y_1(x; c).
 \end{equation}
-Then $U(x; c)$ is an even function and is an exponentially localized traveling wave solution solution to \cref{suspc}. For the remainder of this section, we will fix $c \in (0, \sqrt{2})$ and write the primary pulse solution corresponding to wavespeed $c$ as $U(x)$. We are interested in the existence and stability of multi-pulse equilibrium solutions to \cref{suspc}. A multi-pulse is a localized, multi-modal solution $U_n(x)$ to \cref{eqODE} which resembles multiple, well-separated copies of the primary pulse $U(x)$.
+Then $U(x; c)$ is an even function and is an exponentially localized traveling wave solution solution to \cref{suspc}. For the remainder of this section, we will fix $c \in (c_-, c_+)$ and write the primary pulse solution corresponding to wavespeed $c$ as $U(x)$. We are interested in the existence and stability of multi-pulse equilibrium solutions to \cref{suspc}. A multi-pulse is a localized, multi-modal solution $U_n(x)$ to \cref{eqODE} which resembles multiple, well-separated copies of the primary pulse $U(x)$.
 
 \subsection{Existence of pulses}
 
@@ -2218,23 +2267,20 @@ First, we look at the existence of such pulses. The linearization of \cref{eqODE
 \begin{equation}\label{defA0}
 \calA_0(U^*) = \partial_x^4 + c^2 \partial_x^2 + \rme^{U_*}.
 \end{equation}
-It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. We take the following additional hypothesis concerning the point spectrum of $\calA_0(U)$.
+It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the pointst spectrum of $\calA_0(U)$.
 
 \begin{hypothesis}\label{A0hyp}
-On the space $L^2(\R)$, the point spectrum of $\calA_0(U)$ consists of exactly two eigenvalues:
+The following hold concerning the spectrum of $\calA_0(U)$.
 \begin{enumerate}
-\item A simple eigenvalue at 0 with eigenfunction $\partial_x U(x)$.
 \item $\rmn[\calA_0(U)]=1$, i.e. $\calA_0(U)$ has a unique, simple negative eigenvalue $\lambda_-$.
+\item There exists $\delta_0 > 0$ such that the only spectrum of $\calA_0(U)$ in $(-\infty, \delta_0)$ is two simple eigenvalues at $0$ and $\lambda_-$.
 \end{enumerate}
 \end{hypothesis}
-
-\begin{remark}While the results below hold if we only make assumptions on the nonnegative point spectrum of $\calA_0(U)$, we have obtained strong numerical evidence to support \cref{A0hyp} is supported by numerical evidence. For simplicity, we make assumptions on the entire point spectrum of $\calA_0(U)$.
-\end{remark}
 
 We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
 
 \begin{theorem}\label{multiexist}
-Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ such that:
+Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ such that:
 \begin{enumerate}%[(i)]
 	\item For any integer $m$ with $m \geq m_0$, there exists a unique $n-$modal solution $U_n(x)$ to \cref{eqODE} which is of the form
 	\begin{equation}\label{qn}
@@ -2250,7 +2296,7 @@ Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $
 	\end{equation}
 	where $\alpha$ is defined in \cref{specA00}, and $X_{\mathrm{min}} = \min\{X_1, \dots, X_{n-1}\}$. This bound holds for all derivatives with respect to $x$.
 
-	\item The point spectrum of the linear operator $\calA_0(U_n)$ on $L^2(\R)$ consists of exactly $2n$ eigenvalues, which are as follows:
+	\item The point spectrum of the linear operator $\calA_0(U_n)$ on $L^2(\R)$ contains $2n$ eigenvalues in the interval $(-\infty, \delta_0)$, which are as follows:
   \begin{enumerate}
     \item There are $n$ real eigenvalues $\nu_1, \dots, \nu_n$ with $|\nu_j| < \delta$, where $\nu_n = 0$ is a simple eigenvalue, and for $j = 1, \dots, n-1$,
     \[
@@ -2276,9 +2322,9 @@ Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $
     \item There are $n$ negative eigenvalues which are $\delta-$close to $\lambda_-$.
   \end{enumerate}
 
-  \item The essential spectrum of $\calA_0(U)$ is
+  \item The essential spectrum of $\calA_0(U_n)$ is
     \begin{equation}\label{A0ess}
-    \sigma_{\text{ess}}(\calA_0(U)) = [1 - c^4/4, \infty).
+    \sigma_{\text{ess}}(\calA_0(U_n)) = [1 - c^4/4, \infty).
     \end{equation}
     which is positive and bounded away from 0.
 
@@ -2288,6 +2334,9 @@ Assume Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}. Fix a wavespeed $
 \begin{proof}
 Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has exactly $n$ eigenvalues near each eigenvalue of $\calA_0(U)$, i.e. $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
 \end{proof}
+
+\begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical evidence suggests that there are no additional eigenvalues.
+\end{remark}
 
 \subsection{Stability of pulses}
 
@@ -3091,6 +3140,9 @@ which is \cref{Kreinapprox} in \cref{Kreindiag}.
   beam: Theoretical results and numerical observations}, J. of Diff. Eq., 136
   (1997), pp.~325--355.
 
+\bibitem{Coppel1978}
+{\sc W.~Coppel},{\em Dichotomies in stability theory}, Springer Berlin Heidelberg, 1978
+
 \bibitem{deconinck:ots15}
 {\sc B.~Deconinck and T.~Kapitula}, {\em On the spectral and orbital stability
   of spatially periodic stationary solutions of generalized {K}orteweg-de
@@ -3101,6 +3153,9 @@ which is \cref{Kreinapprox} in \cref{Kreindiag}.
 {\sc B.~Deconinck and O.~Trichtchenko}, {\em High-frequency instabilities of
   small-amplitude solutions of {H}amiltonian {PDE}s}, Disc. Cont. Dyn. Systems,
   37 (2015), pp.~1323--1358.
+
+\bibitem{Evans2010}
+{\sc L.~Evans}, {\em Partial Differential Equations}, American Mathematical Society, 2010.
 
 \bibitem{grillakis:sto87}
 {\sc M.~Grillakis, J.~Shatah, and W.~Strauss}, {\em Stability theory of
@@ -3186,6 +3241,11 @@ which is \cref{Kreinapprox} in \cref{Kreindiag}.
 \bibitem{McKenna1990}
 {\sc P.~McKenna and W.~Walter}, {\em Travelling waves in a suspension bridge},
   {SIAM} J. Appl. Math., 50 (1990), pp.~703--715.
+
+\bibitem{Palmer1984}
+{\sc K.~Palmer},
+{\em Exponential transversal dichotomies and homoclinic points}
+J. Diff. Eq., 55 (1984), pp.~225-256 
 
 \bibitem{pelinovsky:ilf05}
 {\sc D.~Pelinovsky}, {\em Inertia law for spectral stability of solitary waves
