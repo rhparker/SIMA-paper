@@ -2239,7 +2239,7 @@ By \cref{Fcexploc} and the definition of $r(x)$, $e^{(\alpha - \epsilon)r(x)} F_
 \begin{equation}\label{suspdefLalpha}
 \calL_{\alpha - \epsilon} = \frac{d}{dx} - F_Y(Y(x;c); c) - (\alpha - \epsilon) r'(x) \calI.
 \end{equation}
-Then $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$. Since the system \cref{suspsystem} with the substitution \cref{defYZ} still has a hyperbolic equilibrium point at 0, it follows again from \cite[Lemma 4.2]{Palmer1984} and the roughness theorem that $\calL_{\alpha - \epsilon}$ is Fredholm with index 0. Since $F(Y; c)$ is smooth, it follows from \cref{suspsystem} and \cref{Yexploc} that $Y'(x; c)$ is exponentially localized, with
+By equations \cref{Zcprime} and \cref{Fcexploc}, $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$. Since the system \cref{suspsystem} with the substitution \cref{defYZ} still has a hyperbolic equilibrium point at 0, it follows again from \cite[Lemma 4.2]{Palmer1984} and the roughness theorem that $\calL_{\alpha - \epsilon}$ is Fredholm with index 0. Since $F(Y; c)$ is smooth, it follows from \cref{suspsystem} and \cref{Yexploc} that $Y'(x; c)$ is exponentially localized, with
 \begin{align}\label{Yprimeloc}
 |Y'(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
 \end{align}
@@ -2247,7 +2247,7 @@ Since $Y'(x; c) \in \ker \calL$ and $e^{(\alpha - \epsilon)r(x)} Y'(x; c)$ is bo
 \[
 \ker \calL_{\alpha - \epsilon} = \Span\{ e^{(\alpha - \epsilon)r(x)} Y'(x; c) \}
 \]
-Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c)$. This implies that $Z_c(x; c)$ is bounded. It follows from \cref{defYZ} that 
+Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} Y'(x;c)$. This implies that $Z_c(x; c)$ is bounded. It follows from \cref{defYZ} that 
 \begin{align*}
 e^{-(\alpha - \epsilon)r(x)} Y(x; c) &\leq C && x \in \R
 \end{align*}
@@ -2332,10 +2332,10 @@ Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref
 \end{theorem}
 
 \begin{proof}
-Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has exactly $n$ eigenvalues near each eigenvalue of $\calA_0(U)$, i.e. $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
+Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count on $(-\infty, \delta_0)$ and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
 \end{proof}
 
-\begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical evidence suggests that there are no additional eigenvalues.
+\begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
 \end{remark}
 
 \subsection{Stability of pulses}
