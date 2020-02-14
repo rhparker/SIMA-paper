@@ -2280,7 +2280,7 @@ The following hold concerning the spectrum of $\calA_0(U)$.
 We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
 
 \begin{theorem}\label{multiexist}
-Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ such that:
+Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ with $\delta < \delta_0$ such that:
 \begin{enumerate}%[(i)]
 	\item For any integer $m$ with $m \geq m_0$, there exists a unique $n-$modal solution $U_n(x)$ to \cref{eqODE} which is of the form
 	\begin{equation}\label{qn}
@@ -2796,7 +2796,8 @@ $P_{S^\perp} \calA_0(U_n) P_{S^\perp}: S^\perp \rightarrow S^\perp$ is an invert
 \end{lemma}
 
 \begin{proof}
-By \cref{A0ess}, the essential spectrum of $\calA_0(U_n)$ is $\sigma_{\text{ess}} = [1, \infty)$, which is bounded away from 0. Thus the operator $\calA_0(U_n)$ is Fredholm with index 0. Since for the small magnitude eigenvalues $\nu_i$ of $\calA_0(U_n)$ we have $\nu_i \notin [1, \infty)$, the operator $A_0(U_n)  - \nu_i I$ is also Fredholm with index 0. Since $A_0(U_n)  - \nu_i I$ is Fredholm, its range is closed. Thus by the closed range theorem \cite[p.~205]{Yosida}, since $\nu_i \in \R$ and $A_0(q_n)$ is self-adjoint, we have
+By \cref{A0ess}, the essential spectrum of $\calA_0(U_n)$ is $\sigma_{\text{ess}} = [1, \infty)$, which is bounded away from 0. 
+Thus the operator $\calA_0(U_n)$ is Fredholm with index 0. Since for the small magnitude eigenvalues $\nu_i$ of $\calA_0(U_n)$ we have $\nu_i \notin [1, \infty)$, the operator $A_0(U_n)  - \nu_i I$ is also Fredholm with index 0. Since $A_0(U_n)  - \nu_i I$ is Fredholm, its range is closed. Thus by the closed range theorem \cite[p.~205]{Yosida}, since $\nu_i \in \R$ and $A_0(q_n)$ is self-adjoint, we have
 \begin{equation}\label{KerRangeNu}
 \Ran (A_0(q_n) - \nu_i I) = \left(\ker (A_0(q_n) - \nu_i I)\right)^\perp.
 \end{equation}
@@ -2809,7 +2810,7 @@ Since the range of $A_0(q_n)$ is closed and $P_{S^\perp}$ is bounded, the range 
 \]
 Since $\dim \ker P_{S^\perp} A_0(q_n) = \text{codim } P_{S^\perp} A_0(q_n) = 2$, the operator $P_{S^\perp} A_0(q_n)$ is a Fredholm operator with index 0 and kernel $S$.
 
-Thus the restriction $P_{S^\perp} \calA_0(U_n)|_{S^\perp} = P_{S^\perp} \calA_0(U_n) P_{S^\perp}$ is invertible on $S^\perp$. By the definition of $S$ and \cref{multiexist}, $P_{S^\perp}\calA_0(U_n)P_{S^\perp}$ has no eigenvalues of magnitude less than $\delta$. Since the essential spectrum of $\calA_0(U_n)$ is bounded away from 0, by the resolvent bound for normal operators, the linear operator $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1}$ is bounded on $S^\perp$.
+Thus the restriction $P_{S^\perp} \calA_0(U_n)|_{S^\perp} = P_{S^\perp} \calA_0(U_n) P_{S^\perp}$ is invertible on $S^\perp$. By the definition of $S$ and \cref{multiexist}, $P_{S^\perp}\calA_0(U_n)P_{S^\perp}$ has no eigenvalues of magnitude less than $\delta$. By the resolvent bound for normal operators, the linear operator $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1}$ is bounded on $S^\perp$.
 \end{proof}
 
 Before we can evaluate the term $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1} P_{S^\perp}\partial_x^2U^\ell$ from \cref{K2expansion}, we will need the following lemma which gives an expansion for $e^{U_n(x)}$.
