@@ -20,7 +20,9 @@ Providence, RI 02912 \\
 
 On behalf of my co-authors, Todd Kapitula and Bj\"orn Sandstede, I would like to submit our revision of the article ``A reformulated Krein matrix for star-even polynomial operators with applications'' for consideration of publication in SIAM J. Math. Anal..
 
-We are grateful to the referees for their careful reading of the manuscript, and their comments and suggestions regarding how we could improve it. Below, we address each reviewer's comments point-by-point.
+We are grateful to the referees for their careful reading of the manuscript, and their comments and suggestions regarding how we could improve it. First, we would like to highlight a few changes we made in Section 6 in response to comments from the reviewers. Hypothesis 6.1 has been replaced with the more general hypothesis that a symmetric homoclinic orbit (primary pulse) exists for a single wavespeed $c_0$, and the stable and unstable manifolds which intersect in this homoclinic orbit intersect transversely in the 0-level set of the Hamiltonian $H$. From this, it follows that primary pulse homoclinic orbits exist in a open interval around $c_0$ (Lemma 6.2); numerical evidence and prior results suggest that this interval is in fact $(0, \sqrt{2})$. These homoclinic orbits are smooth in the wavespeed $c$ (Lemma 6.2), and their derivative with respect to $c$ is exponentially localized (Lemma 6.4). Furthermore, Hypothesis 6.5 has been revised to a more gerneral form.
+
+Below, we address each reviewer's comments point-by-point. 
 
 Reviewer 1
 \begin{enumerate}
@@ -142,12 +144,12 @@ It is our own numerical evidence. I added text to make that clear.
 \item \emph{Page 25, line 815. Later in the text the authors use an additional estimate for $||\partial_x w||_\infty$. I recommend to add it in to the text of Theorem 6.4.}
 \vspace{4mm}
 
-Theorem 6.4 states that the bounds for $r$ and $w_j$ hold for all derivatives with respect to $x$. As recommended by the reviewer, I have added the particular case of $||\partial_x w||_\infty$, since that is used later.
+Theorem 6.6 (formerly Theorem 6.4) states that the bounds for $r$ and $w_j$ hold for all derivatives with respect to $x$. As recommended by the reviewer, I have added the particular case of $||\partial_x w||_\infty$, since that is used later.
 
 \item \emph{Page 27, line 888. The derivative of $c||\partial_x U||^2$ with respect to $c$ is used here. The authors should briefly explain how the required smoothness of the term follows from Hypothesis 6.1., particularly why $U_{xc}$ is smooth.}
 \vspace{4mm}
 
-Ross.
+By Lemma 6.2 (added in this revision), both $U$ and $\partial_x U$ are smooth in $c$, thus the term $c||\partial_x U||^2$ is well-defined.
 
 \item \emph{Page 32, line 1076. It should be shortly explained how the factors $||\partial_x Un||^2$ appear in the two terms on the right hand side.}
 \vspace{4mm}
@@ -192,12 +194,12 @@ $H(x)$ is a remainder term. I now explain where this term comes from after the s
 \item \emph{Page 38, line 1216. It is not at all clear to me why $\partial_x^2 U^m$ and $\partial_c U^l$ are exponentially separated. I believe this requires some knowledge of dependence of $U$ on $c$.}
 \vspace{4mm}
 
-Ross.
+By Lemma 6.4 (added in this revision), $\partial_c U$ is exponentially localized. Since $\partial_x^2 U$ is also exponentially localized, it follows that $\partial_x^2 U^m$ and $\partial_c U^l$ are exponentially separated.
 
 \item \emph{Page 39, line 1223. The same. This is even more mysterious, as $\partial_x U$ is odd and $\partial_c U$ is even. Why are these exponentially separated? Cannot their peaks after taking the derivatives coincide?}
 \vspace{4mm}
 
-Ross.
+This also follows from Lemma 6.4 (added in this revision), since both $\partial_c U$ and $\partial_x U$ are exponentially localized.
 
 \item \emph{Page 39, line 1234. I do not see how the factor $2c$ (line 1233) changed to $c$ (line 1234).}
 \vspace{4mm}

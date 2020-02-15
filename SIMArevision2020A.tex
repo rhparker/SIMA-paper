@@ -2488,14 +2488,17 @@ The second difficulty is that these previous results for solitary waves do not i
 
 \begin{lemma}\label{qstable}
 Let $c^2 \in (0, 2)$, and let $U(x)$ be the primary pulse solution to \cref{eqODE}. Then $U(x)$ is spectrally and orbitally stable if and only if
-\[
-d''(c) = -\partial_c\left( c\|\partial_xU\|^2 \right)>0,
-\]
+\begin{equation}\label{dcc1}
+d''(c) = -\partial_c\left( c\|\partial_x U\|^2 \right)>0,
+\end{equation}
 where $d(c)$ is defined in \cite[equation (2.16)]{grillakis:sto87}.
 \end{lemma}
 
 \begin{proof}
-We first check that the origin is an isolated eigenvalue. The essential spectrum of $\calA_0(U)$ is the same as that of $\calA_0(U_n)$, and is given by \cref{A0ess}, which is positive and bounded away from 0. By assumption, $\calA_0(U)$ has a single negative eigenvalue.
+\revised{
+First, equation \cref{dcc1} is well-defined since both $U$ and $\partial_x U$ are smooth in $c$ by \cref{lemma:cinterval}.
+}
+Next, we check that the origin is an isolated eigenvalue. The essential spectrum of $\calA_0(U)$ is the same as that of $\calA_0(U_n)$, and is given by \cref{A0ess}, which is positive and bounded away from 0. By assumption, $\calA_0(U)$ has a single negative eigenvalue.
 
 We now use the HKI to complete the proof; in particular, the formulation as presented in equation \cref{e:12}. First, we note that,
 \[
@@ -3154,7 +3157,10 @@ Using this and \cref{invqxx} from \cref{PA0invqxx}, \cref{K2expansion} becomes,
  + \mathcal{O}(\rme^{-2 \alpha X_{\mathrm{min}}}).
 \end{aligned}
 \]
-For $m\neq\ell$, $\partial_x^2U^m$ and $\partial_cU^\ell$ are exponentially separated, thus the second term on the RHS is $\mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}})$ by \cref{expseplemma}. Using H\"{o}lder's inequality and the remainder bound \cref{sjwbound}, the third term on the RHS is $\mathcal{O}(\rme^{-2 \alpha X_{\mathrm{min}}})$. Thus we are left with
+\revised{
+By \cref{Yexploc} and \cref{lemma:Ycexploc}, $\partial_x^2 U$ and $\partial_c U$ are exponentially localized, thus for $m\neq\ell$, $\partial_x^2U^m$ and $\partial_cU^\ell$ are exponentially separated. It follows from \cref{expseplemma} that the second term on the RHS is $\mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}})$. 
+}
+Using H\"{o}lder's inequality and the remainder bound \cref{sjwbound}, the third term on the RHS is $\mathcal{O}(\rme^{-2 \alpha X_{\mathrm{min}}})$. Thus we are left with
 \begin{equation}\label{K2step1}
 \begin{aligned}
 (\vK_2)_{jk}
@@ -3171,7 +3177,10 @@ P_S &\partial_c U^m = \frac{1}{\|\partial_x U\|} \sum_{j=1}^n \langle s_j, \part
 &= \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}).
 \end{aligned}
 \]
-The third line follows from \cref{expseplemma} since $\partial_x U^k$ and $\partial_c U^m$ are exponentially separated for $k \neq m$, and in the fourth line we use $\langle \partial_x U, \partial_c U \rangle = 0$, since $\partial_x U$ is an odd function and $\partial_c U$ is an even function. From this, we have
+\revised{
+The third line follows from \cref{expseplemma}, since by \cref{Yexploc} and \cref{lemma:Ycexploc}, $\partial_x U$ and $\partial_c U$ are exponentially localized, thus $\partial_x U^k$ and $\partial_c U^m$ are exponentially separated for $k \neq m$. 
+}
+In the fourth line we use $\langle \partial_x U, \partial_c U \rangle = 0$, since $\partial_x U$ is an odd function and $\partial_c U$ is an even function. From this, we have
 \[
 P_{S^\perp} \partial_c U^m = (\calI - P_S) \partial_c U^m = \partial_c U^m + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}).
 \]
