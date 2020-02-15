@@ -2207,51 +2207,47 @@ It follows from the stable manifold theorem that for $c \in (c_-, c_+)$, $Y(x; c
 \end{align}
 where $\alpha$ depends on $c$ and is given by \cref{specA00}. In the next lemma, we prove that $\partial_c Y(x; c)$ is also exponentially localized.
 
-\begin{lemma}$\partial_c Y(x; c)$ is also exponentially localized, i.e. for any $\epsilon > 0$, 
+\begin{lemma}The function $\partial_c Y(x; c)$ is exponentially localized, i.e. for each $c \in (c_-, c_+)$ and $\epsilon > 0$ there is a constant $C$ so that
 \begin{align}\label{Ycexploc}
-|\partial_c Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+|\partial_c Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R.
 \end{align}
 \begin{proof}
 Fix $c \in (c_-, c_+)$. Since $Y(x; c)$ solves equation \cref{suspsystem}, $Y(x; c) \in C^1(\R, \R^4)$. Differentiating \cref{suspsystem} with respect to $c$, which we can do by \cref{lemma:cinterval}, we have
 \begin{equation}\label{Ycprime}
 Y_c'(x; c) = F_Y(Y(x;c); c) Y_c(x; c) + F_c(Y(x;c); c).
 \end{equation}
-It follows from the form of $F$ given in \cref{suspF} and \cref{Yexploc} that $F_c(Y(x;c); c)$ is exponentially localized, i.e. for any $\epsilon > 0$,
+It follows from the form of $F$ given in \cref{suspF} and \cref{Yexploc} that $F_c(Y(x;c); c)$ is exponentially localized, i.e. for each $\epsilon > 0$ there is a constant $C$ with
 \begin{align}\label{Fcexploc}
-|F_c(Y(x;c); c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+|F_c(Y(x;c); c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R.
 \end{align}
-
-Define the linear operator $\calL: C^1(\R, \R^4) \mapsto C^0(\R, \R^4)$ by
+Define the linear operator $\calL$ by
 \begin{equation}\label{suspdefL}
-\calL = \frac{d}{dx} - F_Y(Y(x;c); c).
+\calL: C^1(\R, \R^4) \to C^0(\R, \R^4),\quad
+Z \mapsto \calL Z = \frac{dZ}{dx} - F_Y(Y(x;c); c) Z.
 \end{equation}
-By equation \cref{Ycprime}, $F_c(Y(x;c); c) \in \Ran \calL$. By \cite[Lemma 4.2]{Palmer1984} and the roughness theorem for exponential dichotomies \cite{Coppel1978}, since $DF(0; c)$ is hyperbolic, $\calL$ is Fredholm with index 0. By \cref{Uexistshyp}, $\ker \calL = \Span\{U'(x; c)\}$, which is dimension 1. Thus the set of all bounded solutions to \cref{Ycprime} is $Y_c(x; c) + \R Y'(x; c)$.
+By equation \cref{Ycprime}, $F_c(Y(x;c); c) \in \Ran \calL$. Since $DF(0; c)$ is hyperbolic, \cite[Lemma~4.2]{Palmer1984} and the roughness theorem for exponential dichotomies \cite{Coppel1978} imply that $\calL$ is Fredholm with index 0. By \cref{Uexistshyp}, we have $\ker \calL = \Span\{Y'(x; c)\}$. Thus the set of all bounded solutions to \cref{Ycprime} is $\{Y_c(x; c) + \R Y'(x; c)\}$.
 
-At this point, we recast the problem in an exponentially weighted space. Choose any $\epsilon > 0$ with $\epsilon < \alpha$. Let
+Next, we recast the problem in an exponentially weighted space. Choose any $\epsilon \in (0,\alpha)$ and let $\eta(x)$ be a standard mollifier function \cite[Section~C.5]{Evans2010}, then we consider
 \begin{equation}\label{defYZ}
-Y(x; c) = Z(x; c) e^{-(\alpha - \epsilon)r(x)},
+Y(x; c) = Z(x; c) e^{-(\alpha - \epsilon)r(x)}
 \end{equation}
-where $r(x) = \eta(x) * |x|$ and $\eta(x)$ is the standard mollifier \cite[Section C.5]{Evans2010}. We note that $r(x)$ is smooth and that for $|x| > 1$, $r(x) = |x|$ and $r'(x) = 1$. Substituting \cref{defYZ} into \cref{Ycprime} and simplifying, we obtain the weighted equation
+with $r(x) = \eta(x) * |x|$. Note that $r(x)$ is smooth and that $r(x) = |x|$ and $r'(x) = 1$ for $|x| > 1$. Substituting \cref{defYZ} into \cref{Ycprime} and simplifying, we obtain the weighted equation
 \begin{equation}\label{Zcprime}
-Z_c'(x; c) = [F_Y(Y(x;c); c) + (\alpha - \epsilon) r'(x) ] Z_c(x; c) + e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c).
+Z'(x; c) = [F_Y(Y(x;c); c) + (\alpha - \epsilon) r'(x) ] Z(x; c) + e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c).
 \end{equation}
-By \cref{Fcexploc} and the definition of $r(x)$, $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c)$ is bounded. Define the weighted linear operator $\calL_{\alpha - \epsilon}: C^1(\R, \R^4) \mapsto C^0(\R, \R^4)$ by
+By \cref{Fcexploc} and the definition of $r(x)$, the function $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c)$ is bounded. Define the weighted linear operator $\calL_{\alpha - \epsilon}: C^1(\R, \R^4) \mapsto C^0(\R, \R^4)$ by
 \begin{equation}\label{suspdefLalpha}
 \calL_{\alpha - \epsilon} = \frac{d}{dx} - F_Y(Y(x;c); c) - (\alpha - \epsilon) r'(x) \calI.
 \end{equation}
-By equations \cref{Zcprime} and \cref{Fcexploc}, $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$. Since the system \cref{suspsystem} with the substitution \cref{defYZ} still has a hyperbolic equilibrium point at 0, it follows again from \cite[Lemma 4.2]{Palmer1984} and the roughness theorem that $\calL_{\alpha - \epsilon}$ is Fredholm with index 0. Since $F(Y; c)$ is smooth, it follows from \cref{suspsystem} and \cref{Yexploc} that $Y'(x; c)$ is exponentially localized, with
+Equations \cref{Zcprime} and \cref{Fcexploc} imply that $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$. Since $DF(0; c)-(\alpha-\epsilon)\calI$ is still hyperbolic with the same unstable dimension as $DF(0; c)$, it follows again from \cite[Lemma 4.2]{Palmer1984} that $\calL_{\alpha - \epsilon}$ is Fredholm with index 0. Next, we note that the stable-manifold theorem implies that $Y'(x; c)$ is exponentially localized so that
 \begin{align}\label{Yprimeloc}
-|Y'(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
+|Y'(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R.
 \end{align}
-Since $Y'(x; c) \in \ker \calL$ and $e^{(\alpha - \epsilon)r(x)} Y'(x; c)$ is bounded, it is straightforward to verify that $e^{(\alpha - \epsilon)r(x)} Y'(x; c) \in \ker \calL_{\alpha - \epsilon}$. Since $W(x) \in \ker \calL_{\alpha - \epsilon}$ implies $e^{-(\alpha - \epsilon)r(x)} W(x) \in \ker \calL$, and $e^{-(\alpha - \epsilon)r(x)} W(x)$ is bounded, it follows from \cref{Uexistshyp} that 
+Since $Y'(x; c) \in \ker \calL$ and $e^{(\alpha - \epsilon)r(x)} Y'(x; c)$ is bounded, it is straightforward to verify that $e^{(\alpha - \epsilon)r(x)} Y'(x; c) \in \ker \calL_{\alpha - \epsilon}$. Since any element in $\ker \calL_{\alpha - \epsilon}$ gives an element of $\ker \calL$ via (\ref{defYZ}), we conclude that
 \[
-\ker \calL_{\alpha - \epsilon} = \Span\{ e^{(\alpha - \epsilon)r(x)} Y'(x; c) \}
+\ker \calL_{\alpha - \epsilon} = \Span\{ e^{(\alpha - \epsilon)r(x)} Y'(x; c)\}.
 \]
-Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} Y'(x;c)$. This implies that $Z_c(x; c)$ is bounded. It follows from \cref{defYZ} that 
-\begin{align*}
-e^{-(\alpha - \epsilon)r(x)} Y(x; c) &\leq C && x \in \R
-\end{align*}
-The result \cref{Ycexploc} follows from this and the definition of $r(x)$.
+Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $\{Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} Y'(x;c)\}$, which implies that $Y_c(x; c) = Z_c(x; c) e^{-(\alpha - \epsilon)r(x)}$ is exponentially localized as claimed.
 \end{proof}
 \end{lemma}
 
