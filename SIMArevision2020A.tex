@@ -233,6 +233,9 @@
 \newcommand{\vz}{\bm{\mathit{z}}}
 \newcommand{\vn}{\bm{\mathit{0}}}
 
+% to mark revisions
+\newcommand{\revised}[1]{ \textcolor{red}{#1} }
+
 \headers{A reformulated Krein matrix}{T. Kapitula, R. Parker, and B. Sandstede}
 
 \title{A reformulated Krein matrix for star-even polynomial operators with applications\thanks{Submitted to the editors 01/30/2019.
@@ -306,8 +309,11 @@ Consider the star-even operator polynomial,
 \[
 \calP_n(\lambda)\coloneqq\sum_{j=0}^n\lambda^j\calA_j.
 \]
+\revised{
 On some Hilbert space, $X$, endowed with inner-product,
-$\langle\cdot,\cdot\rangle$, which in turn induces a norm, $\|\cdot\|$, we assume the operator coefficients $\calA_{2\ell}$ are
+$\langle\cdot,\cdot\rangle$, which in turn induces a norm, $\|\cdot\|$, 
+}
+we assume the operator coefficients $\calA_{2\ell}$ are
 Hermitian, $\calA_{2\ell}^\rma=\calA_{2\ell}$, and the operator coefficients
 $\calA_{2\ell+1}$ are skew-Hermitian,
 $\calA_{2\ell+1}^\rma=-\calA_{2\ell+1}$. Here we let $\calT^\rma$ denote the adjoint of the operator $\calT$. If $n=1$,
@@ -365,9 +371,11 @@ associated eigenspace $\E_{\rmi\lambda_0}$, set
 \[
 k_\rmi^-(\rmi\lambda_0)=\rmn\left(-\lambda_0\left[\rmi P_n'(\rmi\lambda_0)\right]|_{\E_{\rmi\lambda_0}}\right).
 \]
-Here $\rmn(\vS)$ denotes the number of negative eigenvalues for the Hermitian
-matrix $\vS$, and $-\lambda_0\rmi P_n'(\rmi\lambda_0)|_{\E_{\rmi\lambda_0}}$ is the
-Hermitian matrix formed by the representation of the Hermitian operator
+Here $\rmn(\vS)$ denotes the number of negative eigenvalues for the 
+\revised{
+Hermitian matrix $\vS$, and $-\lambda_0\rmi P_n'(\rmi\lambda_0)|_{\E_{\rmi\lambda_0}}$ is the Hermitian matrix 
+}
+formed by the representation of the Hermitian operator
 $-\rmi\lambda_0P_n'(\rmi\lambda_0)$ restricted to the eigenspace
 $\E_{\rmi\lambda_0}$. If the polynomial eigenvalue is simple with associated
 eigenvector $u_{\rmi\lambda_0}$, then
@@ -380,7 +388,10 @@ in particular, if $n=1$ then it takes the more familiar form,
 k_\rmi^-(\rmi\lambda_0)=
 \rmn\left(\langle\calA_0u_{\rmi\lambda_0},u_{\rmi\lambda_0}\rangle\right).
 \]
-See \cref{s:22} for more details. The nonnegative integer $k_\rmi^-(\rmi\lambda_0)$ is the negative Krein index
+\revised{
+See \cref{s:22} for more details.
+}
+The nonnegative integer $k_\rmi^-(\rmi\lambda_0)$ is the negative Krein index
 associated with the purely imaginary eigenvalue. If
 $k_\rmi^-(\rmi\lambda_0)=0$, the polynomial eigenvalue is said to have
 positive Krein signature; otherwise, it has negative Krein signature. The
@@ -399,15 +410,22 @@ polynomial eigenvalues will have positive real part. This is the so-called Hamil
 should consult \cite[Chapter~7.1]{kapitula:sad13} for more details regarding
 the case of the collision of two simple polynomial  eigenvalues, and
 \cite{kapitula:tks10,vougalter:eoz06} for the case of higher-order
-collisions. The case of $n\ge2$ can be reformulated as an $n=1$ problem, see \cite{kapitula:iif13} and the references therein. Note that if $k_\rmi^-=0$, then no polynomial eigenvalues will leave the imaginary axis.
+collisions. 
+\revised{
+The case of $n\ge2$ can be reformulated as an $n=1$ problem, see \cite{kapitula:iif13} and the references therein.
+} 
+Note that if $k_\rmi^-=0$, then no polynomial eigenvalues will leave the imaginary axis.
 
 The HKI is defined to be the sum of the three indices,
 \[
 K_{\Ham}=k_\rmr+k_\rmc+k_\rmi^-.
 \]
-The HKI is intimately related to the operator coefficients. For the sake of exposition, first suppose $\calA_0,\calA_n$ are
-nonsingular. If $X=\C^N$,
-i.e., the operator is actually a star-even matrix polynomial with $nN$
+The HKI is intimately related to the operator coefficients. 
+\revised{
+For the sake of exposition, first suppose $\calA_0,\calA_n$ are
+nonsingular. 
+}
+If $X=\C^N$, i.e., the operator is actually a star-even matrix polynomial with $nN$
 polynomial eigenvalues,
 \[
 K_{\Ham}=\begin{cases}
@@ -421,7 +439,10 @@ space; consequently, taking the limit $N\to+\infty$ provides no meaningful
 information regarding the limiting case of operator coefficients which are
 compact operators. Consequently, we henceforth assume $n\in\{1,2\}$.
 
-Now, suppose $\calA_0$ has a nontrivial kernel, but that the highest-order coefficient is nonsingular.  If $n=1$, then under the widely
+\revised{
+Now, suppose $\calA_0$ has a nontrivial kernel, but that the highest-order coefficient is nonsingular.
+}
+If $n=1$, then under the widely
 applicable assumptions,
 \begin{enumerate}
 \item $\displaystyle{\calA_1:\ker(\calA_0)\mapsto\ker(\calA_0)^\perp}$
@@ -468,6 +489,7 @@ The matrix $\vK(\lambda)$ is known as the Krein matrix. The properties (a) and (
 above are reminiscent of those possessed by the Evans matrix, except that
 the Evans matrix is analytic \cite[Chapters~8-10]{kapitula:sad13}. Regarding (b) and (c), since the determinant of a matrix is equal to the product of its eigenvalues, property (b) is satisfied if at least one of the eigenvalues is zero. Henceforth, we will call the eigenvalues of the Krein matrix, say $r_j(\lambda)$, the Krein eigenvalues. The determination of the Krein signature of a purely imaginary polynomial
 eigenvalue takes place through the Krein eigenvalues.
+\revised{
 If $r_j(\lambda_0)=0$ for some $\lambda_0\in\rmi\R$, the Krein
 signature is found by considering the sign of $r_j'(\lambda_0)$. Thus, via a plot of the Krein eigenvalues one can graphically determine the signature of a purely imaginary polynomial eigenvalue through the slope of the curve at a zero. The interested reader should consult the beautiful paper by Koll\'ar and Miller \cite{kollar:gks14} for,
 \begin{enumerate}
@@ -475,6 +497,7 @@ signature is found by considering the sign of $r_j'(\lambda_0)$. Thus, via a plo
 \item Hamiltonian instability index results which arise from this graphical perspective.
 \end{enumerate}
 A significant difference between our approach and that of \cite{kollar:gks14} is the number of Krein eigenvalues to be graphed; in particular, our approach gives a finite number, whereas the approach of \cite{kollar:gks14} yields a number equal to the number of eigenvalues for $\calA_0$.
+}
 
 The Krein matrix was first constructed for linear
 polynomials of the canonical form,
@@ -860,8 +883,11 @@ graph of the Krein eigenvalues, we will redefine the Krein matrix as
 \vK_S(z)=-z\left[\calP_n(\rmi z)|_S-%
 \calP_n(\rmi z)P_{S^\perp}(P_{S^\perp}\calP_n(\rmi z)P_{S^\perp})^{-1}P_{S^\perp}\calP_n(\rmi z)|_{S}\right].
 \]
+\revised{
 This redefinition adds a singularity to the Krein matrix at $z=0$, but in the search for nonzero polynomial eigenvalues this is an unimportant consequence. On the other hand, the Krein eigenvalues for the new matrix are related to the original matrix
-via $r_j(z)\mapsto -zr_j(z)$. Thus, at a zero of the Krein eigenvalue we have
+via $r_j(z)\mapsto -zr_j(z)$. 
+}
+Thus, at a zero of the Krein eigenvalue we have
 the mapping $r_j'(z)\mapsto -zr_j'(z)$, so for the new Krein matrix we have
 the relationship
 \[
@@ -877,6 +903,7 @@ depends upon the length of the chain, see \cite[Section~2.2]{kapitula:tks10} and
 will not provide any more details here, as in our examples the polynomial eigenvalues will be simple. In summary,
 we have the following result:
 
+\revised{
 \begin{theorem}\label{thm:krein}
 For $n\in\{1,2\}$ consider the star-even polynomial,
 \[
@@ -912,6 +939,7 @@ k_\rmi^-(\rmi z)=\begin{cases}0,\quad&r_j'(z)>0\\1,\quad&r_j'(z)<0.\end{cases}
 \]
 \end{enumerate}
 \end{theorem}
+}
 
 \begin{remark}
 Recall that the choice,
@@ -929,8 +957,10 @@ In its general form the Krein matrix looks to be complicated, and does not appea
 
 \section{First application: modulational instabilities for small amplitude periodic solutions}\label{s:4}
 
+\revised{
 For our first application we show how the Krein matrix can be used to understand the existence of
 instability bubbles, i.e., a curve of unstable spectra which is attached to the imaginary axis, for small spatially periodic waves to dispersive systems.
+}
 The instabilities will not necessarily be associated with high-frequency
 (long wavelength) perturbations. Without loss of generality we will assume the spatial period is $2\pi$.
 
@@ -942,7 +972,7 @@ where
 \begin{enumerate}
 \item $\displaystyle{\calL=\sum_{j=0}^Na_j\ell^{2j}\partial_x^{2j}}$ with
     $\ell,(-1)^Na_{2N}>0$
-\item $c\in\R$ is a free parameter (typically the wavespeed)
+\item \revised{ $c\in\R$ is a free parameter (typically the wavespeed) }
 \item $f(u)$ is a smooth nonlinearity with $f(0)=f'(0)=0$.
 \end{enumerate}
 The parameter $\ell$ can be adjusted via a rescaling of $x$.
@@ -964,7 +994,7 @@ p_{\calL}(r,\ell)=\sum_{j=0}^Na_j\ell^{2j}r^{2j}.
 Regarding the characteristic polynomial we assume there is an $\ell_0$ such that,
 \begin{enumerate}
 \item $\partial_rp_{\calL}(\rmi,\ell_0)\neq0$
-\item upon setting the zero amplitude wavespeed,
+\item \revised{ upon setting the zero amplitude wavespeed, }
 \begin{equation}\label{e:condb}
 c_0\coloneqq p_{\calL}(\rmi,\ell_0)=\sum_{j=0}^N(-1)^ja_j\ell_0^{2j},
 \end{equation}
@@ -1047,6 +1077,7 @@ We use a Bloch decomposition to understand the spectral problem, see
 v(y)=\rme^{\rmi\mu y}w(y),\quad w(y+2\pi)=w(y),
 \]
 the problem \cref{e:54} becomes,
+\revised{
 \begin{equation}\label{e:55}
 \lambda w+(\partial_y+\rmi \mu)\left(\calL_\mu w-c_0w+f'(U)w\right)=0,\quad |f'(U)|=\calO(\epsilon),
 \end{equation}
@@ -1054,6 +1085,7 @@ where
 \[
 \calL_\mu=\sum_{j=0}^Na_{2j}\ell_0^{2j}(\partial_y+\rmi \mu)^{2j}.
 \]
+}
 Because
 the underlying wave is even in $x$, it is sufficient to consider
 $0\le\mu\le1/2$; in particular, if
@@ -1069,8 +1101,11 @@ Set,
 \calA_0\coloneqq\calL_\mu-c_0+f'(U).
 \]
 The operator $\calA_0$ is self-adjoint on the space of $2\pi$-periodic
-functions endowed with the natural $L^2[0,2\pi]$ inner product. The
-invertible operator $\partial_y+\rmi\mu$ is skew-Hermitian.  Since $\calA_0$ is self-adjoint with smooth dependence on parameters, each of the eigenvalues of $\calA_0$ is smooth in $(\mu,\epsilon)$ \cite{kato:ptf80}. The same can be said of the composition, $(\partial_y+\rmi\mu)\calA_0$, except at possibly the finite number of points where there are Jordan chains. Consequently, we will first consider the spectral problem
+functions endowed with the natural $L^2[0,2\pi]$ inner product. 
+\revised{
+The invertible operator $\partial_y+\rmi\mu$ is skew-Hermitian.  Since $\calA_0$ is self-adjoint with smooth dependence on parameters, each of the eigenvalues of $\calA_0$ is smooth in $(\mu,\epsilon)$ \cite{kato:ptf80}. The same can be said of the composition, $(\partial_y+\rmi\mu)\calA_0$, except at possibly the finite number of points where there are Jordan chains. 
+}
+Consequently, we will first consider the spectral problem
 when $\epsilon=0$. Afterwards, we will make generic statements about what
 will happen for $\epsilon>0$ small.
 
@@ -1081,7 +1116,10 @@ For $0<\mu\le1/2$ we rewrite the spectral problem in the star-even form,
 \end{equation}
 The boundary conditions associated with this problem are periodic,
 $w(y+2\pi)=w(y)$.
-First assume $\epsilon=0$, so that $f'(U)\equiv0$. The spectrum for \cref{e:56} is straightforward to compute using a Fourier analysis. Letting
+\revised{
+First assume $\epsilon=0$, so that $f'(U)\equiv0$. 
+}
+The spectrum for \cref{e:56} is straightforward to compute using a Fourier analysis. Letting
 $w(y)=\rme^{\rmi ny}$ for $n\in\Z$ we get a sequence of problems,
 \begin{equation}\label{e:57}
 d(n,\mu)+\lambda\frac{1}{\rmi(n+\mu)}=0,
@@ -1091,18 +1129,25 @@ steady-state problem,
 \[
 d(n,\mu)\coloneqq\sum_{j=0}^N(-1)^ja_{2j}\ell_0^{2j}(n+\mu)^{2j}-c_0.
 \]
-
-We first show that the spectrum of $\calA_0$ has a nonzero and finite number of negative eigenvalues for at least some values of $\mu$. First suppose $\epsilon=0$.
+\revised{
+We first show that the spectrum of $\calA_0$ has a nonzero and finite number of negative eigenvalues for at least some values of $\mu$. 
+}
+First suppose $\epsilon=0$.
 The existence assumption implies $d(\pm1,0)=0$. For small $\mu$ we have the
 expansions,
 \begin{equation}\label{e:58}
 d(\pm1,\mu)=\pm\left(2\sum_{j=1}^N(-1)^jja_j\right)\mu+\calO(\mu^2).
 \end{equation}
+\revised{
 Consequently, $d(+1,\mu)d(-1,\mu)<0$ for small $\mu$, so one of $d(\pm1,\mu)$ is negative for small $\mu$. Consequently, $\rmn(\calA_0)\ge1$. The assumption $(-1)^Na_{2N}>0$ implies there
 is an $N_0$ such that $d(n,\mu)>0$ for $|n|\ge N_0$. Consequently, there can be at most a finite number of negative eigenvalues, so
 $\rmn(\calA_0)<\infty$. By continuity $\rmn(\calA_0)$ will remain unchanged for $\epsilon>0$ and small.
+}
 
-We now construct the Krein matrix, and then use it to analyze the spectrum.  Assume there is a sequence
+\revised{
+We now construct the Krein matrix, and then use it to analyze the spectrum. 
+}
+Assume there is a sequence
 $n_1,n_2,\dots,n_q$ such that $d(n,\mu)<0$ for $n\in\{n_1,n_2,\dots,n_q\}$,
 and $d(n,\mu)>0$ for $n\notin\{n_1,n_2,\dots,n_q\}$. Clearly,
 $\rmn(\calA_0)=q$. We take as our space $S=N(\calA_0)$,
@@ -1130,9 +1175,11 @@ removable singularities. All of the poles are polynomial eigenvalues for the spe
 problem. Since they correspond to removable singularities, the polynomial
 eigenvalues all have positive Krein signature. 
 
+\revised{
 \begin{remark}
 The poles are removable when $\epsilon=0$ because  $[\calP_1(\lambda)S]\cap S^\perp=\{0\}$. In particular, it follows from the fact that the $\epsilon=0$ problem has constant coefficients.  One expects that for $\epsilon>0,\,[\calP_1(\lambda)S]\cap S^\perp$ has a nontrivial intersection. Thus, the expectation is that the poles will no longer be removable for small amplitude waves.
 \end{remark}
+}
 
 The Krein eigenvalues are
 \[
@@ -1149,6 +1196,7 @@ r_j'(z_j^\rmn)=d(n_j,\mu)<0,
 so these zeros correspond to polynomial eigenvalues with negative Krein
 signature. In conclusion, via Fourier analysis we have located all of the polynomial eigenvalues, and through the Krein eigenvalues we have identified those which have a negative Krein index.
 
+\revised{
 \begin{remark}
 Note that for constant states, $\epsilon=0$, the Krein signature can be directly computed from the dispersion relation.  For fixed $\mu$ the Krein
 eigenvalues are dispersion curves that correspond to polynomial eigenvalues
@@ -1158,6 +1206,7 @@ of polynomial eigenvalues with opposite Krein signature. Consequently, for a sma
 without actually computing a Krein eigenvalue. This graphical
 approach towards spectral stability by looking at the dispersion curves is the one taken by \cite{deconinck:hfi16,kollar:dco19,trichtchenko:sop18}. The Krein matrix approach is more robust in the sense that it while it too is graphical in nature, it does not assume that the underlying waves have small amplitude.
 \end{remark}
+}
 
 When $\epsilon=0$ the wave is spectrally stable, and all of the spectra is purely imaginary. For $\epsilon>0$ a spectral instability arises through the collision of a purely imaginary
 polynomial eigenvalue with positive Krein index and one with negative Krein
@@ -1326,11 +1375,14 @@ of the top figure near the polynomial eigenvalues of interest. Upon perturbation
 \end{center}
 \end{figure}
 
-We now consider the spectral stability of the periodic wave. For the unperturbed problem the operator $\calA_0$ is,
+We now consider the spectral stability of the periodic wave.
+\revised{
+For the unperturbed problem the operator $\calA_0$ is,
 \[
 \calA_0=\frac2{15}(\partial_z+\rmi\mu)^4+\frac8{15}(\partial_z+\rmi\mu)^2+\frac6{15},
 \]
 so the dispersion relationship is,
+}
 \[
 d(n,\mu)=\frac2{15}(n+\mu)^4-\frac8{15}(n+\mu)^2+\frac6{15}.
 \]
@@ -1349,22 +1401,24 @@ Consequently,
 \rmn(\calA_0)=\begin{cases}1,\quad&0<\mu<\mu_{\mathrm{ch}}\\
 2,\quad&\mu_{\mathrm{ch}}<\mu<1/2.\end{cases}
 \]
-
+\revised{
 Since the negative index of an invertible operator is unchanged for small perturbations, we know there is a $0<\mu_0\ll1$ such that if $\mu$ is in one of two intervals, 
 \[
 \mu\in\left(\mu_0,\mu_{\mathrm{ch}}-\mu_0\right)\cup
 \left(\mu_{\mathrm{ch}}+\mu_0,1/2\right),
 \]
 then $\rmn(\calA_0)$ remains unchanged for sufficiently small $\epsilon$. Going back to equation \cref{e:11}, we then know that for small $\epsilon$ the HKI is,
+}
 \[
 k_\rmr+k_\rmc+k_\rmi^-=\begin{cases}1,\quad&\mu_0<\mu<\mu_{\mathrm{ch}}\\
 2,\quad&\mu_{\mathrm{ch}}<\mu<1/2.\end{cases}
 \]
 If there are instability bubbles for the perturbed problem, there can be at most one for $\mu<\mu_{\mathrm{ch}}$, and at most two for $\mu_{\mathrm{ch}}<\mu<1/2$. For $0\le\mu<\mu_0$ a curve of unstable spectra may arise from the origin. We will not consider that here, but an example calculation for the KdV with general nonlinearity is provided in \cite[Section~4]{haragus:ots08}.
-
+\revised{
 \begin{remark}
 The transition point in the index, $\mu_{\mathrm{ch}}$, depends on $\epsilon$. For our purposes it is sufficient to consider how the number of instability bubbles depends on the change in $\rmn(\calA_0)$ between the two $\mu$-intervals without worrying about the precise boundary between the intervals.
 \end{remark}
+}
 
 \begin{figure}[ht]%[tbp]
 \begin{center}
@@ -1417,9 +1471,12 @@ instability (see right panel of \cref{f:specamp}), the zeros of the Krein
 eigenvalues are purely real. One of the zeros corresponds to a polynomial eigenvalue with negative Krein index. In
 \cref{f:KreinEvalCollide2} we see a plot of the Krein eigenvalues for
 $\mu=0.3585$. The panel on the left shows the plot for the trivial state, and
-the panel on the right shows the plot for a small wave. Here there is not a
+the panel on the right shows the plot for a small wave. 
+\revised{
+Here there is not a
 zero/pole collision for the Krein eigenvalues. On the bottom left figure we see a polynomial eigenvalue with negative Krein signature, and a removable singularity which corresponds to a polynomial eigenvalue with positive Krein signature. For $\epsilon>0$ a zero of the Krein eigenvalue emerges from the pole (e.g., see the bottom right figure in \cref{f:KreinEvalCollide1}), and this zero corresponds to a polynomial eigenvalue with positive Krein signature. As $\epsilon$ increases these two zeros of the Krein eigenvalue collide, and leave the real axis through a saddle-node bifurcation. Since the
 zeros of the Krein eigenvalues now have nonzero imaginary part, for this value of $\mu$ there is a spectral instability (see right panel of \cref{f:specamp}).
+}
 
 %\begin{figure}[ht]%[tbp]
 %\begin{center}
@@ -1793,7 +1850,9 @@ There exists a constant $C_0>0$, independent of $\epsilon$, such that for $n=1,2
 \end{lemma}
 
 \begin{proof}
+\revised{
 First suppose $n=1$. Then
+}
 \[
 P_{S^\perp}P_1(\rmi z)P_{S^\perp}=P_{S^\perp}\calA_0P_{S^\perp}
 \left[\calI+z
@@ -1833,7 +1892,9 @@ $\lambda_0$ is a small polynomial eigenvalue if and only if $\det\vK_S(z_0)=0$ f
 We now use the result of \cref{l:51} to find an approximation of the Krein matrix for small $z$.
 
 \begin{lemma}\label{l:52}
+\revised{
 Suppose that $n=1$. The Krein matrix is analytic for $|z|<1/C_0$. Moreover, if $|z|$ is sufficiently small the Krein matrix has the expansion,
+}
 \begin{equation}\label{KSz}
 \begin{aligned}
 \vK_S(z)&=-z\Big[\diag(\mu_1,\dots,\mu_N)+\overline{z}\left(\rmi\calA_1|_S\right)\\
@@ -1846,7 +1907,10 @@ Suppose that $n=1$. The Krein matrix is analytic for $|z|<1/C_0$. Moreover, if $
 \end{lemma}
 
 \begin{proof}
-Analyticity follows from the fact that $P_{S^\perp}P_1(\rmi z)P_{S^\perp}$ is invertible for $|z|<1/C_0$. Regarding the expansion, we first note that for the first term in the Krein matrix,
+\revised{
+Analyticity follows from the fact that $P_{S^\perp}P_1(\rmi z)P_{S^\perp}$ is invertible for $|z|<1/C_0$. 
+}
+Regarding the expansion, we first note that for the first term in the Krein matrix,
 \[
 \left(\calP_1(\rmi z)|_S\right)_{jk}=\langle s_j,[\calA_0+z(\rmi\calA_1)]s_k\rangle=
 \mu_k\langle s_j,s_k\rangle+\overline{z}\langle s_j,(\rmi\calA_1)s_k\rangle,
@@ -1901,7 +1965,9 @@ which provides,
 The final result follows upon combining the above two calculations.
 \end{proof}
 
+\revised{
 Upon setting $\gamma=\rmi\overline{z}$ the bracketed part of the Krein matrix \cref{KSz} is approximated by a quadratic star-even polynomial matrix,
+}
 \[
 \diag(\mu_1,\dots,\mu_N)+\gamma\left(\calA_1|_S\right)+
 \gamma^2
@@ -2160,7 +2226,7 @@ An equilibrium solution to \cref{suspc} satisfies the ODE,
 \partial_x^4u +  c^2\partial_x^2u + \rme^{u} - 1 = 0.
 \end{equation}
 Smets and van den Berg \cite[Theorem 11]{Smets2002} prove the existence of a localized, symmetric solution $U(x)$ to \cref{eqODE} for almost all wavespeeds $c \in (0, \sqrt{2})$. Van den Berg et al. \cite[Theorem~1]{Berg2018} use a computer-assisted proof technique to show existence of such solutions to \cref{eqODE} for all speeds $c$ with $c^2 \in [0.5, 1.9]$. 
-
+\revised{
 Equation \cref{eqODE} can be written as a first-order system in the standard way as 
 \begin{equation}\label{suspsystem}
 Y' = F(Y; c),
@@ -2173,7 +2239,9 @@ is smooth. Furthermore, $F$ has the reversible symmetry $F(R(Y)) = -R(F(Y))$, wh
 \[
 R(y_1, y_2, y_3, y_4) = (y_1, -y_2, y_3, -y_4).
 \]
+}
 
+\revised{
 Equation \cref{suspsystem} is Hamiltonian with energy $H:\R^4 \times \R \rightarrow \R$ given by
 \begin{equation}\label{suspH}
 H(Y; c) = y_2 y_4 - \frac{1}{2}y_3^2 + \frac{c^2}{2}y_2^2 + \rme^{y_1} - y_1.
@@ -2183,35 +2251,47 @@ We note that for all $c \in (0, \sqrt{2})$, $Y = 0$ is a hyperbolic equilibrium 
 \mu = \pm \sqrt{\frac{-c^2 \pm \sqrt{c^4 - 4}}{2} } = \pm \alpha \pm \rmi\beta,
 \end{align}
 for $\alpha, \beta > 0$. Thus the equilibrium at 0 has a two-dimensional stable manifold $W^s(0; c)$ and two-dimensional unstable manifold $W^u(0; c)$.
+}
 
+\revised{
 We take the following hypothesis concerning the existence of a localized, symmetric, primary pulse solution to \cref{suspsystem}.
 \begin{hypothesis}\label{Uexistshyp}
 For some $c_0 \in (0, \sqrt{2})$, there exists a nontrivial, symmetric homoclinic orbit solution $Y(x; c_0) \in W^s(0; c_0) \cap W^u(0; c_0) \subset H^{-1}(0; c_0)$ to \cref{suspsystem}. Furthermore, the stable manifold $W^s(0; c_0)$ and the unstable manifold $W^u(0; c_0)$ intersect transversely in $H^{-1}(0; c_0)$ at $Y(0; c_0)$.
 \end{hypothesis}
+}
 
+\revised{
 We have the following result, which proves the existence of homoclinic orbits $Y(x; c)$ for $c$ near $c_0$.
-
 \begin{lemma}\label{lemma:cinterval}
 Assume \cref{Uexistshyp}. Then there exists an open interval $(c_-, c_+)$ containing $c_0$ such that for all $c \in (c_-, c_+)$ the stable and unstable manifolds $W^s(0; c)$ and $W^u(0; c)$ have a one-dimensional transverse intersection in $H^{-1}(0; c)$ which is a homoclinic orbit $Y(x; c)$. $Y(x; c)$ is symmetric with respect to the standard reversor operator $R$, and the map $c \mapsto Y(x; c)$ from $(c_-, c_+)$ to $C(\R, \R^4)$ is smooth.
 \end{lemma}
 \begin{proof}
 Briefly, $Y(0; c_0) \neq 0$, and it follows from the form of the Hamiltonian in \cref{suspH} that $\nabla_Y H(Y(0; c_0); c_0) \neq 0$. By the implicit function theorem, for $c$ close to $c_0$, the 0-level set $H^{-1}(0; c)$ contains a smooth 3-dimensional manifold $K(c)$, with $K(c_0)$ containing $Y(0; c_0)$. The result follows from the transverse intersection of $W^s(0; c_0)$ and $W^u(0; c_0)$ in $K(c_0) \subset H^{-1}(0; c_0)$, the smoothness of $F$, and the implicit function theorem. Symmetry with respect to the reversor $R$ follows from symmetry of $Y(0; c_0)$ and the reversibility of \cref{suspsystem}.
 \end{proof}
+}
 
+\revised{
 \begin{remark}We can choose $(c_-, c_+)$ to be the maximal open interval for which \cref{lemma:cinterval} holds. Given the existence results of \cite{Smets2002,Berg2018} and our own numerical analysis, it is likely that $(c_-, c_+) = (0, \sqrt{2})$. 
 \end{remark}
+}
 
+\revised{
 It follows from the stable manifold theorem that for $c \in (c_-, c_+)$, $Y(x; c)$ is exponentially localized, i.e. for any $\epsilon > 0$, 
 \begin{align}\label{Yexploc}
 |Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R,
 \end{align}
 where $\alpha$ depends on $c$ and is given by \cref{specA00}. In the next lemma, we prove that $\partial_c Y(x; c)$ is also exponentially localized.
+}
 
-\begin{lemma}The function $\partial_c Y(x; c)$ is exponentially localized, i.e. for each $c \in (c_-, c_+)$ and $\epsilon > 0$ there is a constant $C$ so that
+\begin{lemma}\label{lemma:Ycexploc}
+\revised{
+The function $\partial_c Y(x; c)$ is exponentially localized, i.e. for each $c \in (c_-, c_+)$ and $\epsilon > 0$ there is a constant $C$ so that
 \begin{align}\label{Ycexploc}
 |\partial_c Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R.
 \end{align}
+}
 \begin{proof}
+\revised{
 Fix $c \in (c_-, c_+)$. Since $Y(x; c)$ solves equation \cref{suspsystem}, $Y(x; c) \in C^1(\R, \R^4)$. Differentiating \cref{suspsystem} with respect to $c$, which we can do by \cref{lemma:cinterval}, we have
 \begin{equation}\label{Ycprime}
 Y_c'(x; c) = F_Y(Y(x;c); c) Y_c(x; c) + F_c(Y(x;c); c).
@@ -2226,7 +2306,9 @@ Define the linear operator $\calL$ by
 Z \mapsto \calL Z = \frac{dZ}{dx} - F_Y(Y(x;c); c) Z.
 \end{equation}
 By equation \cref{Ycprime}, $F_c(Y(x;c); c) \in \Ran \calL$. Since $DF(0; c)$ is hyperbolic, \cite[Lemma~4.2]{Palmer1984} and the roughness theorem for exponential dichotomies \cite{Coppel1978} imply that $\calL$ is Fredholm with index 0. By \cref{Uexistshyp}, we have $\ker \calL = \Span\{Y'(x; c)\}$. Thus the set of all bounded solutions to \cref{Ycprime} is $\{Y_c(x; c) + \R Y'(x; c)\}$.
+}
 
+\revised{
 Next, we recast the problem in an exponentially weighted space. Choose any $\epsilon \in (0,\alpha)$ and let $\eta(x)$ be a standard mollifier function \cite[Section~C.5]{Evans2010}, then we consider
 \begin{equation}\label{defYZ}
 Y(x; c) = Z(x; c) e^{-(\alpha - \epsilon)r(x)}
@@ -2248,14 +2330,17 @@ Since $Y'(x; c) \in \ker \calL$ and $e^{(\alpha - \epsilon)r(x)} Y'(x; c)$ is bo
 \ker \calL_{\alpha - \epsilon} = \Span\{ e^{(\alpha - \epsilon)r(x)} Y'(x; c)\}.
 \]
 Since $e^{(\alpha - \epsilon)r(x)} F_c(Y(x;c); c) \in \Ran \calL_{\alpha - \epsilon}$, the set of all bounded solutions to \cref{Zcprime} is $\{Z_c(x; c) + \R e^{(\alpha - \epsilon)r(x)} Y'(x;c)\}$, which implies that $Y_c(x; c) = Z_c(x; c) e^{-(\alpha - \epsilon)r(x)}$ is exponentially localized as claimed.
+}
 \end{proof}
 \end{lemma}
 
+\revised{
 For $c \in (c_-, c_+)$, let
 \begin{equation}\label{suspU}
 U(x; c) = y_1(x; c).
 \end{equation}
 Then $U(x; c)$ is an even function and is an exponentially localized traveling wave solution solution to \cref{suspc}. For the remainder of this section, we will fix $c \in (c_-, c_+)$ and write the primary pulse solution corresponding to wavespeed $c$ as $U(x)$. We are interested in the existence and stability of multi-pulse equilibrium solutions to \cref{suspc}. A multi-pulse is a localized, multi-modal solution $U_n(x)$ to \cref{eqODE} which resembles multiple, well-separated copies of the primary pulse $U(x)$.
+}
 
 \subsection{Existence of pulses}
 
@@ -2263,8 +2348,11 @@ First, we look at the existence of such pulses. The linearization of \cref{eqODE
 \begin{equation}\label{defA0}
 \calA_0(U^*) = \partial_x^4 + c^2 \partial_x^2 + \rme^{U_*}.
 \end{equation}
+\revised{
 It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the pointst spectrum of $\calA_0(U)$.
+}
 
+\revised{
 \begin{hypothesis}\label{A0hyp}
 The following hold concerning the spectrum of $\calA_0(U)$.
 \begin{enumerate}
@@ -2272,11 +2360,18 @@ The following hold concerning the spectrum of $\calA_0(U)$.
 \item There exists $\delta_0 > 0$ such that the only spectrum of $\calA_0(U)$ in $(-\infty, \delta_0)$ is two simple eigenvalues at $0$ and $\lambda_-$.
 \end{enumerate}
 \end{hypothesis}
+}
 
-We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
+We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}. 
+\revised{
+In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
+}
 
 \begin{theorem}\label{multiexist}
-Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref{A0hyp}. Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ with $\delta < \delta_0$ such that:
+\revised{
+Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref{A0hyp}. 
+}
+Fix a wavespeed $c$, and let $U(x)$ be an exponentially localized solution to \cref{eqODE}. Then for any $n \geq 2$ and any sequence of nonnegative integers $k_1, \dots, k_{n-1}$ with at least one of the $k_j \in \{0, 1 \}$, there exists a nonnegative integer $m_0$ and $\delta > 0$ with $\delta < \delta_0$ such that:
 \begin{enumerate}%[(i)]
 	\item For any integer $m$ with $m \geq m_0$, there exists a unique $n-$modal solution $U_n(x)$ to \cref{eqODE} which is of the form
 	\begin{equation}\label{qn}
@@ -2292,7 +2387,7 @@ Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref
 	\end{equation}
 	where $\alpha$ is defined in \cref{specA00}, and $X_{\mathrm{min}} = \min\{X_1, \dots, X_{n-1}\}$. This bound holds for all derivatives with respect to $x$.
 
-	\item The point spectrum of the linear operator $\calA_0(U_n)$ on $L^2(\R)$ contains $2n$ eigenvalues in the interval $(-\infty, \delta_0)$, which are as follows:
+	\item \revised{ The point spectrum of the linear operator $\calA_0(U_n)$ on $L^2(\R)$ contains $2n$ eigenvalues in the interval $(-\infty, \delta_0)$, which are as follows:}
   \begin{enumerate}
     \item There are $n$ real eigenvalues $\nu_1, \dots, \nu_n$ with $|\nu_j| < \delta$, where $\nu_n = 0$ is a simple eigenvalue, and for $j = 1, \dots, n-1$,
     \[
@@ -2309,10 +2404,13 @@ Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref
   	\begin{equation}\label{sjwbound}
   	\|w_j\|_\infty \leq C\rme^{-2 \alpha X_{\mathrm{min}}}.
   	\end{equation}
-    This bound holds for all derivatives with respect to $x$. In particular,
+    This bound holds for all derivatives with respect to $x$. 
+    \revised{
+    In particular,
     \[
     \| \partial_x w_j\|_\infty \leq C\rme^{-2 \alpha X_{\mathrm{min}}}.
     \]
+    }
     The eigenfunction corresponding to $\nu_n$ is $s_n = \partial_x U_n$.
 
     \item There are $n$ negative eigenvalues which are $\delta-$close to $\lambda_-$.
@@ -2328,11 +2426,16 @@ Assume \cref{Uexistshyp} and \cref{A0hyp}, and let $\delta_0 > 0$ be as in \cref
 \end{theorem}
 
 \begin{proof}
-Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple, and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count on $(-\infty, \delta_0)$ and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
+\revised{
+Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is simple,
+}
+and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count on $(-\infty, \delta_0)$ and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
 \end{proof}
 
+\revised{
 \begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
 \end{remark}
+}
 
 \subsection{Stability of pulses}
 
@@ -2679,7 +2782,10 @@ Using \cref{multiexist}, let $U_n(x)$ be an $n-$modal solution to \cref{eqODE}, 
 \begin{equation}\label{orthoeigs}
 \langle s_i, s_j \rangle = \|\partial_x U \|^2 \delta_{ij}.
 \end{equation}
-Typically, we assume these eigenfunctions also have unit length. However, this is not important in the construction of the Krein matrix, nor in the derived properties. Let $S = \Span\{s_1, \dots s_n\}$.
+Typically, we assume these eigenfunctions also have unit length. However, this is not important in the construction of the Krein matrix, nor in the derived properties. 
+\revised{
+Let $S = \Span\{s_1, \dots s_n\}$.
+}
 
 By \cref{l:53}, and using the normalization of \cref{orthoeigs}, for small $|z|$ the Krein matrix is the $n \times n$ matrix,
 \begin{equation}\label{Kreinform}
@@ -2695,7 +2801,9 @@ and
 (\vK_2)_{jk} = \langle \calA_1 s_j, P_{S^\perp}(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1} P_{S^\perp}\calA_1 s_k \rangle.
 \end{equation}
 This is, to leading order, a matrix-valued quadratic polynomial in $z$ (and its complex conjugate). %If we take $z \in \R$, the Krein matrix is Hermitian. 
+\revised{
 The factors $\|\partial_xU_n\|^2$ on the RHS of \cref{Kreinform} come from using the scaling \cref{orthoeigs} for the eigenfunctions $s_i$ of $\calA_0(U_n)$.
+}
 We now prove \cref{Kreindiag} in a series of lemmas. In all that follows, $C$ refers to a constant independent of $x$, but it may have a different value each time it is used. The first lemma is a bound on the product of exponentially separated pulses.
 
 \begin{lemma}\label{expseplemma}
@@ -2704,9 +2812,11 @@ Let $U_+(x)$ and $U_-(x)$ be localized pulses which decay exponentially with rat
 \sup_{x \in \R} | U_-(x) U_+(x)|\leq C \rme^{-2 \alpha X},
 \end{equation}
 and
+\revised{
 \begin{equation}\label{expsepbound2}
 |\langle U_-(x), U_+(x) \rangle |\leq C \rme^{-(3 \alpha/2) X}.
 \end{equation}
+}
 \begin{proof}
 Without loss of generality, let $U_\pm(x)$ be exponentially localized peaks centered at $\pm X$, thus $|U_-(x)| \leq C e^{-\alpha|x + X|}$ and $|U_+(x)| \leq C \rme^{-\alpha|x - X|}$. For $x \in (-\infty, -X]$,
 \begin{align}\label{endprodbound}
@@ -2727,14 +2837,19 @@ For the bound \cref{expsepbound2}, we split the integral into four pieces.
 \end{aligned}
 \end{equation}
 For the first integral, we use \cref{endprodbound} to get
+\revised{
 \begin{align*}
 \int_{-\infty}^{-X} |U_-(x) U_+(x)| \rmd x &\leq C \int_{-\infty}^{-X} \rme^{2 \alpha x} \rmd x = C \rme^{-2 \alpha X}
 \end{align*}
+}
 For the second integral, we use \cref{middleprodbound} to get
+\revised{
 \begin{align*}
+\revised
 \int_{-X}^0 |U_-(x) U_+(x)| \rmd x &\leq C \int_{-X}^0 \rme^{-\alpha(x + X)} \rme^{\alpha(x - X)} \rmd x \leq C \int_{-X}^0 \rme^{-\alpha(x + X)/2}\rme^{\alpha(x - X)} \rmd x \\
 &\leq C \rme^{-(3 \alpha/2) X } \int_{-X}^0 \rme^{(\alpha/2)x} \rmd x \leq C \rme^{-(3 \alpha/2) X }
 \end{align*}
+}
 The third and fourth integrals are similar. Combining these, we obtain \cref{expsepbound2}.
 \end{proof}
 \end{lemma}
@@ -2754,6 +2869,7 @@ For the matrix $\vK_1$ in \cref{Kreinform},
 
 \begin{proof}
 Substituting $\calA_1 = -2c\partial_x$ into \cref{defK1}, $(\vK_1)_{jk} = \rmi 2 c \langle s_j, \partial_xs_k \rangle$. Using the expansion \cref{sj} from Theorem \ref{multiexist},
+\revised{
 \begin{equation}\label{K1exp}
 \begin{aligned}
 \langle s_j ,\partial_xs_k \rangle
@@ -2764,6 +2880,7 @@ Substituting $\calA_1 = -2c\partial_x$ into \cref{defK1}, $(\vK_1)_{jk} = \rmi 2
 + \sum_{\ell = 1}^{n} d_{k\ell} \langle w_j, \partial_x^2U^\ell \rangle.
 \end{aligned}
 \end{equation}
+}
 By translation invariance of the inner product on $L^2(\R)$,
 \[
 \langle \partial_xU^m, \partial_x^2U^m \rangle = \langle \partial_xU, \partial_x(\partial_xU) \rangle = 0,
@@ -2792,21 +2909,29 @@ $P_{S^\perp} \calA_0(U_n) P_{S^\perp}: S^\perp \rightarrow S^\perp$ is an invert
 \end{lemma}
 
 \begin{proof}
+\revised{
 By \cref{A0ess}, the essential spectrum of $\calA_0(U_n)$ is $\sigma_{\text{ess}} = [1, \infty)$, which is bounded away from 0. 
 Thus the operator $\calA_0(U_n)$ is Fredholm with index 0. Since for the small magnitude eigenvalues $\nu_i$ of $\calA_0(U_n)$ we have $\nu_i \notin [1, \infty)$, the operator $A_0(U_n)  - \nu_i I$ is also Fredholm with index 0. Since $A_0(U_n)  - \nu_i I$ is Fredholm, its range is closed. Thus by the closed range theorem \cite[p.~205]{Yosida}, since $\nu_i \in \R$ and $A_0(q_n)$ is self-adjoint, we have
 \begin{equation}\label{KerRangeNu}
 \Ran (A_0(q_n) - \nu_i I) = \left(\ker (A_0(q_n) - \nu_i I)\right)^\perp.
 \end{equation}
+}
 
+\revised{
 Next, we look at the operator $P_{S^\perp} \calA_0(U_n)$. Since $\calA_0(U_n)$ is self-adjoint and $P_{S^\perp}$ commutes with $\calA_0(U_n)$, $P_{S^\perp} \calA_0(U_n)$ is also self-adjoint. Since $P_{S^\perp} A_0(U_n) = A_0(U_n) P_{S^\perp}$, the kernel of $P_{S^\perp} \calA_0(U_n)$ contains $S$ as well as the kernel of $\calA_0(U_n)$, which is contained in $S$. The only other elements in the kernel of $P_{S^\perp} \calA_0(U_n)$ are functions $y$ for which $(A_0(q_n) - \nu_i I) y = s_i$, since that will be annihilated by the projection $P_{S^\perp}$. But such a function cannot exist, since by \eqref{KerRangeNu}, we would have $s_i \perp \ker (A_0(q_n) - \nu_i I)$, which contains $s_i$. We conclude that $\ker P_{S^\perp} A_0(q_n) = S$.
+}
 
+\revised{
 Since the range of $A_0(q_n)$ is closed and $P_{S^\perp}$ is bounded, the range of $P_{S^\perp} A_0(q_n)$ is also closed. Thus by the closed range theorem and the fact that $P_{S^\perp} A_0(q_n)$ is self-adjoint,
 \[
 \Ran P_{S^\perp} A_0(q_n) = (\ker (P_{S^\perp} A_0(q_n))^*)^\perp = (\ker (P_{S^\perp} A_0(q_n)))^\perp = S^\perp.
 \]
 Since $\dim \ker P_{S^\perp} A_0(q_n) = \text{codim } P_{S^\perp} A_0(q_n) = 2$, the operator $P_{S^\perp} A_0(q_n)$ is a Fredholm operator with index 0 and kernel $S$.
+}
 
+\revised{
 Thus the restriction $P_{S^\perp} \calA_0(U_n)|_{S^\perp} = P_{S^\perp} \calA_0(U_n) P_{S^\perp}$ is invertible on $S^\perp$. By the definition of $S$ and \cref{multiexist}, $P_{S^\perp}\calA_0(U_n)P_{S^\perp}$ has no eigenvalues of magnitude less than $\delta$. By the resolvent bound for normal operators, the linear operator $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1}$ is bounded on $S^\perp$.
+}
 \end{proof}
 
 Before we can evaluate the term $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1} P_{S^\perp}\partial_x^2U^\ell$ from \cref{K2expansion}, we will need the following lemma which gives an expansion for $e^{U_n(x)}$.
@@ -2873,6 +2998,7 @@ We can now evaluate $(P_{S^\perp} \calA_0(U_n) P_{S^\perp})^{-1} P_{S^\perp}\par
 \end{lemma}
 
 \begin{proof}
+\revised{
 Let $y = (P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1} P_{S^\perp}\partial_x^2U^\ell$. By Lemma \ref{PA0inv}, this is well-defined, and $y \in S^\perp$. Since $P_{S^\perp}\partial_x^2U^\ell$ is smooth and $(P_{S^\perp} \calA_0(U_n)P_{S^\perp})^{-1}$ is bounded, $y$ is smooth as well and is the unique solution to the equation
 \begin{equation*}
 (P_{S^\perp} \calA_0(U_n) P_{S^\perp})y = P_{S^\perp}\partial_x^2U^\ell,
@@ -2923,13 +3049,19 @@ Using \cref{Linbound1} and \cref{Linbound2}, equation \cref{Lin4} simplifies to 
 \calA_0(U_n) \tilde{w} + h(x) = 0,
 \end{equation}
 where $h(x)$ is a small remainder term with uniform bound $\|h(x)\|_\infty = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$. 
+}
 
 We now follow the procedure in \cite{sandstede:som98}, which we briefly outline below. Let $W = (\tilde{w}, \partial_x\tilde{w},\partial_x^2 \tilde{w},\partial_x^3 \tilde{w})$. As in \cite{sandstede:som98}, we rewrite \cref{A0heq} as a first-order system for $W$, and we take $W$ to be a piecewise function consisting of the $2n$ pieces $W_j^\pm, j = 1, \dots, n$, where
 \begin{align*}
 W_j^-(x) &\in C^0([-X_{j-1}, 0]) \\
 W_j^+(x) &\in C^0([0, X_j])
 \end{align*}
-with $X_0 = X_n = \infty$. We note the the domains of the functions $W_j^\pm(x)$ overlap at the endpoints; the second and third equations in the system \cref{Wsystem} are matching conditions for these pieces at the appropriate endpoints. Following this procedure, and using the expansions \cref{A0expansion} for $\calA_0(U_n)$ on the $j$-th piece, we obtain the system of equations
+with $X_0 = X_n = \infty$. 
+\revised{
+We note the the domains of the functions $W_j^\pm(x)$ overlap at the endpoints; the second and third equations in the system \cref{Wsystem} are matching conditions for these pieces at the appropriate endpoints. 
+}
+Following this procedure, and using the expansions \cref{A0expansion} for $\calA_0(U_n)$ on the $j$-th piece, we obtain the system of equations
+\revised{
 \begin{equation}\label{Wsystem}
 \begin{aligned}
 (W_j^\pm)'(x) = A(U(x)) W_j^\pm(x) &+ G_j(x) W_j^\pm(x)+ H_j(x) \\
@@ -2952,7 +3084,12 @@ G_j(x) = \begin{pmatrix}
 \sum_{k \neq j} (1 - e^{U(x - \rho_{kj})}) & 0 & 0 & 0
 \end{pmatrix},
 \]
-and $\rho_{kj}$ is the signed distance from peak of $U^k$ to peak of $U^j$ in $U_n$. $H_j$ is a remainder term which comes from the term $h(x)$ in \cref{A0heq} and the remainder term in the expansion \cref{A0expansion}, and we have the estimate $\|H_j \|_\infty = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$. For $k \neq j$, $|\rho_{kj}| \geq 2 X_{\mathrm{min}}$. This implies $e^{U(x - \rho_{kj})} = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$ on the $j$-th piece, thus we can use a Taylor expansion to show $\|G_j\| = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$. Following the procedure in \cite{sandstede:som98}, we obtain a unique piecewise solution $W_j^\pm$ to the first two equations of \cref{Wsystem}. The third equation is generally not satisfied, so what we have constructed is a unique solution $\tilde{y}$ of the form \cref{Linsolform} to \cref{Linstart} which is continuous except for $n - 1$ jumps. By uniqueness, we must have $\tilde{y} = y$, thus $y$ is actually of the form \cref{Linsolform} with $\tilde{w}$ smooth. Finally, Lin's method gives us the uniform bound
+}
+and $\rho_{kj}$ is the signed distance from peak of $U^k$ to peak of $U^j$ in $U_n$. 
+\revised{
+$H_j$ is a remainder term which comes from the term $h(x)$ in \cref{A0heq} and the remainder term in the expansion \cref{A0expansion}, and we have the estimate $\|H_j \|_\infty = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$. 
+}
+For $k \neq j$, $|\rho_{kj}| \geq 2 X_{\mathrm{min}}$. This implies $e^{U(x - \rho_{kj})} = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$ on the $j$-th piece, thus we can use a Taylor expansion to show $\|G_j\| = \mathcal{O}(\rme^{-\alpha X_{\mathrm{min}}})$. Following the procedure in \cite{sandstede:som98}, we obtain a unique piecewise solution $W_j^\pm$ to the first two equations of \cref{Wsystem}. The third equation is generally not satisfied, so what we have constructed is a unique solution $\tilde{y}$ of the form \cref{Linsolform} to \cref{Linstart} which is continuous except for $n - 1$ jumps. By uniqueness, we must have $\tilde{y} = y$, thus $y$ is actually of the form \cref{Linsolform} with $\tilde{w}$ smooth. Finally, Lin's method gives us the uniform bound
 $\|\tilde{w}\|_\infty = \mathcal{O}(\rme^{-2 \alpha X_{\mathrm{min}}})$, from which \cref{invqxx} follows.
 \end{proof}
 
@@ -3059,6 +3196,7 @@ Using \cref{K1final} from \cref{K1small} and \cref{K2final} from \cref{K2diag}, 
 \end{aligned}
 \]%\end{equation}
 Integrating by parts,
+\revised{
 \[
 \begin{aligned}
 -\frac{\vK_S(z)}{z}
@@ -3068,6 +3206,7 @@ Integrating by parts,
 &= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) + d''(c) \vI_n \overline{z}^2  + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3),
 \end{aligned}
 \]
+}
 which is \cref{Kreinapprox} in \cref{Kreindiag}.
 
 
