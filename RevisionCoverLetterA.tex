@@ -22,7 +22,7 @@ On behalf of my co-authors, Todd Kapitula and Bj\"orn Sandstede, I would like to
 
 We are grateful to the referees for their careful reading of the manuscript, and their comments and suggestions regarding how we could improve it. First, we would like to highlight a few changes we made in Section 6 in response to comments from the reviewers. Hypothesis 6.1 has been replaced with the more general hypothesis that a symmetric homoclinic orbit (primary pulse) exists for a single wavespeed $c_0$, and the stable and unstable manifolds which intersect in this homoclinic orbit intersect transversely in the 0-level set of the Hamiltonian $H$. From this, it follows that primary pulse homoclinic orbits exist in a open interval around $c_0$ (Lemma 6.2); numerical evidence and prior results suggest that this interval is in fact $(0, \sqrt{2})$. These homoclinic orbits are smooth in the wavespeed $c$ (Lemma 6.2), and their derivative with respect to $c$ is exponentially localized (Lemma 6.4). Furthermore, Hypothesis 6.5 has been revised to a more gerneral form.
 
-Below, we address each reviewer's comments point-by-point. 
+Below, we address each reviewer's comments point-by-point. All changes have been highlighted with red text.
 
 Reviewer 1
 \begin{enumerate}
@@ -134,7 +134,7 @@ Fixed.
 \item \emph{Page 23, line 742. In Example 6, the Hilbert space $X$ considered was not specified in the text, neither the norm $||\cdot||$ that is used throughout the section.}
 \vspace{4mm}
 
-The Hilbert space is now specified for the linear operator $A_0(U^*)$ (equation (6.6)). The Hilbert space is also specified for the operator $\mathcal{P}_2(\lambda; U_n)$ (equation (6.14)). All norms and inner products that will be used in the section are specified before the statement of Theorem 6.4.
+The Hilbert space is now specified for the linear operator $A_0(U^*)$ (equation (6.6)). The Hilbert space is also specified for the operator $\mathcal{P}_2(\lambda; U_n)$ (equation (6.14)). All norms and inner products that will be used in the section are specified before the statement of Theorem 6.6 (formerly Theorem 6.4).
 
 \item \emph{Page 24, line 778. The authors refer to numerical evidence. They should be more specific. Is it their own numerical evidence?}
 \vspace{4mm}
@@ -144,7 +144,7 @@ It is our own numerical evidence. I added text to make that clear.
 \item \emph{Page 25, line 815. Later in the text the authors use an additional estimate for $||\partial_x w||_\infty$. I recommend to add it in to the text of Theorem 6.4.}
 \vspace{4mm}
 
-Theorem 6.6 (formerly Theorem 6.4) states that the bounds for $r$ and $w_j$ hold for all derivatives with respect to $x$. As recommended by the reviewer, I have added the particular case of $||\partial_x w||_\infty$, since that is used later.
+Theorem 6.6 (formerly Theorem 6.4) states that the bounds for $r$ and $w_j$ hold for all derivatives with respect to $x$. As recommended by the reviewer, I have added the particular case of $||\partial_x w||_\infty$, since that result is used later.
 
 \item \emph{Page 27, line 888. The derivative of $c||\partial_x U||^2$ with respect to $c$ is used here. The authors should briefly explain how the required smoothness of the term follows from Hypothesis 6.1., particularly why $U_{xc}$ is smooth.}
 \vspace{4mm}
@@ -184,12 +184,12 @@ This has been completely rewritten and should now be clear. In particular, we ar
 \item \emph{Page 37, lines 1179-1181. The function $W_j^\pm$ are not defined on disjoint intervals. Perhaps the zero end points should be replaced by a an arbitrary point inside the interval $(-X_{j-1},X_j)$.}
 \vspace{4mm}
 
-This is correct. The domains of the functions $W_j^\pm(x)$ do in fact overlap at their endpoints. This is now made clear in the text. Using a standard implementation of Lin's method, we solve the system (6.44). The second and third equations in (6.44) are matching conditions for these functions at the endpoints. (I MAY NEED TO BETTER EXPLAIN LIN'S METHOD?)
+This is correct. The domains of the functions $W_j^\pm(x)$ do in fact overlap at their endpoints. This is now made clear in the text. Using a standard implementation of Lin's method, we solve the system (6.64). The second and third equations in (6.64) are matching conditions for these functions at the endpoints.
 
 \item \emph{Page 37, line 1183. What is $H(x)$? Explain.}
 \vspace{4mm}
 
-$H(x)$ is a remainder term. I now explain where this term comes from after the system of equations (6.50) is introduced in Lemma 6.16.
+$H(x)$ is a remainder term. I explain exactly where this term comes from after the system of equations (6.64).
 
 \item \emph{Page 38, line 1216. It is not at all clear to me why $\partial_x^2 U^m$ and $\partial_c U^l$ are exponentially separated. I believe this requires some knowledge of dependence of $U$ on $c$.}
 \vspace{4mm}
@@ -225,7 +225,7 @@ Fixed.
 
 \item \emph{Why is knowing small eigenvalues important?}
 
-Ross. A good time to start plugging Hale/Lin/Sandstede ideas/results?
+I have added a sentence to this effect at the beginning of Section 5.
 
 \item \emph{Is the main goal of the entire analysis to obtain a graph of Krein eigenvalues as mentioned on line 327? If so, how does this compare to the Kollar and Miller paper (reference 24). }
 
