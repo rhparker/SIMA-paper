@@ -22,7 +22,7 @@ On behalf of my co-authors, Todd Kapitula and Bj\"orn Sandstede, I would like to
 
 We are grateful to the referees for their careful reading of the manuscript, and their comments and suggestions regarding how we could improve it. First, we would like to highlight a few changes we made in Section 6 in response to comments from the reviewers. Hypothesis 6.1 has been replaced with the more general hypothesis that a symmetric homoclinic orbit (primary pulse) exists for a single wavespeed $c_0$, and the stable and unstable manifolds which intersect in this homoclinic orbit intersect transversely in the 0-level set of the Hamiltonian $H$. From this, it follows that primary pulse homoclinic orbits exist in a open interval around $c_0$ (Lemma 6.2); numerical evidence and prior results suggest that this interval is in fact $(0, \sqrt{2})$. These homoclinic orbits are smooth in the wavespeed $c$ (Lemma 6.2), and their derivative with respect to $c$ is exponentially localized (Lemma 6.4). Furthermore, Hypothesis 6.5 has been revised to a more general form.
 
-Below, we address each reviewer's comments point-by-point. All changes have been highlighted with red text.
+Below, we address each reviewer's comments point-by-point. All changes have been highlighted with red text. All line numbers and equation numbers refer to the revised manuscript.
 
 Reviewer 1
 \begin{enumerate}
@@ -30,7 +30,7 @@ Reviewer 1
 \item \emph{Page 2, lines 62-63. On line 62 the matrix $iP_n'$ is discussed but line 63 refers to $-i\lambda_0 P_n'$.}
 \vspace{4mm}
 
-Fixed.
+This has been fixed. The matrix we are discussing on lines 62-63 is $-i\lambda_0 P_n'$.
 
 \item \emph{Page 2, line 67. The derivation of the centered formula on line 67 is not completely obvious. The authors derive it in Section 2.2. I suggest they include a note ``see Section 2.2 for more details''.}
 \vspace{4mm}
@@ -45,12 +45,12 @@ A small note was added about how $n\ge2$ can be reformulated as an $n=1$ problem
 \item \emph{Page 3, line 87. The distinction between the two cases considered on lines 87-93 and then on lines 94-110 is not easily recognizable from the text. I suggest to add a sentence somewhere on lines 83-87 that will explain that two cases $A_0$ nonsingular and singular will be discussed separately to make the reader aware of it.}
 \vspace{4mm}
 
-Done.
+A sentence has been added in line 87 which introduces the first case ($A_0$ nonsingular). A sentence has been added in line 96 which introduces the second case ($A_0$ singular).
 
 \item \emph{Page 10, line 329. The redefinition of the Krein matrix introduces a new zero/singular point at $z = 0$. The text should briefly explain why such singularity is irrelevant in the studied case.}
 \vspace{4mm}
 
-Done.
+This is explained on line 339.
 
 \item \emph{Page 10, Theorem 3.1. I recommend to change the notation of the itemization (a)-(b) (lines 349-350) and then once again (a)-(b) (lines 359-362).}
 \vspace{4mm}
@@ -60,7 +60,7 @@ Theorem 3.1 has been mildly rewritten.  We hope that the new version better refl
 \item \emph{Page 12, lines 401-403. The relation between $c$ and $c_0$ is missing.}
 \vspace{4mm}
 
-Done
+In line 398, we explain that $c$ is a free parameter typically representing the wavespeed. In line 412, we define the zero-amplitude wavespeed $c_0$.
 
 \item \emph{Page 12, lines 419-420. The authors claim that their method can be easily adopted to cover second-order-in-time systems. However, they do not even suggest how the problems with the rigorous justification of the continuity of the spectrum would be resolved. They have already removed one of the related examples from the original manuscript but the claim remained.}
 \vspace{4mm}
@@ -70,47 +70,47 @@ The sentence was removed, since we no longer consider second-order-in-time probl
 \item \emph{Page 13, lines 444 and 446. The Bloch decomposition introduces the term $\partial y + i \mu$ instead of $\partial y + i u$. This was already pointed out in my previous review.}
 \vspace{4mm}
 
-Fixed.
+This is a typo and has been fixed.
 
 \item \emph{Page 13, lines 456-460. The authors make claims about the smoothness of the spectrum on parameters. They need to provide detailed references for these claims.}
 \vspace{4mm}
 
-Done.
+This is explained starting on line 468. An appropriate reference is cited.
 
 \item \emph{Page 14, line 472. The authors should at least briefly explain why $d(+1,\mu)d(-1,\mu) < 0$ for small $\mu$ implies $n(A_0) \geq 1$, at least referring to the relation (4.8). The same is true for the claim on line 478, $n(A_0) = q$.}
 \vspace{4mm}
 
-Done.
+A brief explanation has been added, starting on line 487.
 
 \item \emph{Page 14, line 489. It would be useful if the claim about non-removable poles for $\epsilon > 0$ would be explained at least briefly.}
 \vspace{4mm}
 
-Done.
+A brief explanation has been provided in Remark 4.2 (new numbering).
 
 \item \emph{Page 14, lines 500-501. I suggest to add a note that the case in Remark 4.2 corresponds to the case $\epsilon = 0$.}
 \vspace{4mm}
 
-Done.
+This is now noted in this remark (now Remark 4.3).
 
 \item \emph{Pages 14-15, lines 502-550. There is a whole page of the text that describes the bifurcation scenario for $\epsilon = 0$ and its perturbation for $\epsilon > 0$ as that is a novel contribution. One page later in Remark 4.4 (page 16) in one paragraph there is a reference to the literature that provides a full explanation of the observed phenomenon (except the details about Krein matrix). The correct way to present scientific results is to first inform the reader about the previously established results and then to present own results and compare them with the literature, potentially with emphasis on a new knowledge gained. The authors should clearly state what new results in Section 4 they obtained compared to [8, 23, 35].}
 \vspace{4mm}
 
-Done.  We agree with the referee here, and regret that we got the ordering wrong.  We moved this discussion up to Remark 4.3.
+We agree with the referee here, and regret that we got the ordering wrong. We moved this discussion up to Remark 4.3.
 
 \item \emph{Page 18, lines 609-610. It is not specified what is $A_0$ in the presented example.}
 \vspace{4mm}
 
-Fixed.
+$A_0$ is defined on line 628.
 
 \item \emph{Page 18, lines 611-613. The value of $\mu_{ch}$ may depend on $\epsilon$, so the formula for $n(A_0)$ generically changes with $\epsilon$ for some values of $\mu$.}
 \vspace{4mm}
 
-Agree. The text now clearly states that the index is unchanged if one stays away from zero and $\mu_{ch}$.
+Agree. The text now states (starting on line 638) that the index is unchanged if one stays away from zero and $\mu_{ch}$. See also Remark 4.5.
 
 \item \emph{Page 20, lines 644-645. I do not understand the claim in the sentence ``Since this value ... are purely real.'' Perhaps a typo.}
 \vspace{4mm}
 
-Fixed.
+This is now explained in the first paragraph on the top of page 20. CAN YOU MAKE SURE THIS HAS BEEN ADDRESSED? THE SENTENCE THE REVIEWER WAS CONFUSED ABOUT HAS NOT BEEN CHANGED.
 
 \item \emph{Page 21, lines 672-673. The centered identity does not rely on the fact that $P_{S^\perp}$ is a spectral projection.}
 
@@ -119,7 +119,7 @@ This has been removed.
 \item \emph{Page 21, lines 677. The operator norm is used without specification of the underlying functional space.}
 \vspace{4mm}
 
-Fixed. Since this is a generic setting with Hilbert space, $X$, we are just using the norm induced from the inner product.  This is mentioned at the beginning or the article.
+Since this is a generic setting with Hilbert space, $X$, we are using the norm induced from the inner product.  This is mentioned at the beginning or the article.
 
 \item \emph{Page 21, lines 691, 694-695. The correct assumption should be $|z| < 1/C_0$. This was already pointed out in my previous review.}
 \vspace{4mm}
@@ -129,7 +129,7 @@ Fixed.
 \item \emph{Page 22, line 711. The term ``bracketed part'' should directly refer to formula (line 693).}
 \vspace{4mm}
 
-Fixed.
+This has been fixed (line 738).
 
 \item \emph{Page 23, line 742. In Example 6, the Hilbert space $X$ considered was not specified in the text, neither the norm $||\cdot||$ that is used throughout the section.}
 \vspace{4mm}
@@ -159,22 +159,22 @@ An explanation of this is now found in the paragraph before the statement of Lem
 \item \emph{Page 33, line 1090. A comma between $U^-$ and $U^+$ is missing.}
 \vspace{4mm}
 
-Fixed.
+The commas has been added (line 1227).
 
 \item \emph{Page 34, lines 1105 and 1108. The notation should be changed from $q^\pm$ to $U^\pm$.}
 \vspace{4mm}
 
-Fixed.
+This notation has been fixed (lines 1242-1247)
 
 \item \emph{Page 35, line 1118. Typo in the first term on the right hand side $\partial_x U_x^m$.}
 \vspace{4mm}
 
-Fixed.
+This typo has been fixed (line 1256).
 
 \item \emph{Page 35, line 1135. If it is not hard to show the authors should provide a brief argument.}
 \vspace{4mm}
 
-This is now given in much greater detail.
+This argument is now given in much greater detail.
 
 \item \emph{Page 37, lines 1169-1170. I do not see how substituting (6.40) into (6.39) leads to (6.42). Particularly it is unclear to me how the outside projection term was removed.}
 \vspace{4mm}
@@ -204,7 +204,7 @@ This also follows from Lemma 6.4 (added in this revision), since both $\partial_
 \item \emph{Page 39, line 1234. I do not see how the factor $2c$ (line 1233) changed to $c$ (line 1234).}
 \vspace{4mm}
 
-This is a typo and has been fixed.
+This is a typo and has been fixed (line 1417).
 
 \end{enumerate}
 
@@ -213,19 +213,20 @@ Reviewer 2
 \item \emph{You mention the notion of stability early without explaining.}
 \vspace{4mm}
 
+BJORN THINKS WE SHOULD SAY THIS IN THE OPENING PARAGRAPH.
 We are confused on this point. In line 51-52 of the revision we state that instability is related to polynomial eigenvalues with positive real part.
 
 \item \emph{Instability bubble was mentioned on line 327, but not explained until line 510.}
 
-Fixed.
+Instability bubbles are now briefly described at the beginning of section 4 (lines 388-391).
 
 \item \emph{What is sideband instability?}
 
-Fixed.
+Fixed. MAYBE ADD A SENTENCE EXPLAINING WHAT THIS MEANS AFTER LINE 465?
 
 \item \emph{Why is knowing small eigenvalues important?}
 
-I have added a sentence to this effect at the beginning of Section 5.
+I have added several sentences to this effect at the beginning of Section 5.
 
 \item \emph{Is the main goal of the entire analysis to obtain a graph of Krein eigenvalues as mentioned on line 327? If so, how does this compare to the Kollar and Miller paper (reference 24). }
 
