@@ -1104,7 +1104,9 @@ is an eigenvalue associated with $-\mu$, see \cite[Section~4]{haragus:ots08}. Fo
 discrete, countable, and have an accumulation point only at $\infty$. The
 full spectrum, which is essential spectra only, will be the union of all the point spectra as $\mu$ is varied over the range.
 
-We are henceforth interested only in sideband instabilities, which are unstable spectra associated with nonzero $\mu$. Take $\mu>0$ and set
+\revised{
+We are henceforth interested only in sideband instabilities, which are unstable spectra associated with nonzero $\mu$. Take $\mu>0$
+} and set
 \[
 \calA_0\coloneqq\calL_\mu-c_0+f'(U).
 \]
@@ -2358,12 +2360,15 @@ Then $U(x; c)$ is an even function and is an exponentially localized traveling w
 
 \subsection{Existence of pulses}
 
-First, we look at the existence of such pulses. The linearization of \cref{eqODE} about a given solution $U_*$ of \cref{eqODE} is the operator $\calA_0(U^*): H^4(\R) \subset L^2(\R) \mapsto L^2(\R)$, given by
+First, we look at the existence of such pulses. The linearization of \cref{eqODE} about a given solution $U_*$ of \cref{eqODE} is the operator 
+\revised{
+$\calA_0(U^*): H^4(\R) \subset L^2(\R) \mapsto L^2(\R)$}
+, given by
 \begin{equation}\label{defA0}
 \calA_0(U^*) = \partial_x^4 + c^2 \partial_x^2 + \rme^{U_*}.
 \end{equation}
 \revised{
-It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the pointst spectrum of $\calA_0(U)$.
+It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the point spectrum of $\calA_0(U)$, which is supported by our numerical analysis.
 }
 
 \revised{
@@ -2447,13 +2452,17 @@ and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U
 \end{proof}
 
 \revised{
-\begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
+\begin{remark}$\calA_0(U)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
 \end{remark}
 }
 
 \subsection{Stability of pulses}
 
-Now that we know about the existence of single and multiple pulses, we consider their spectral stability. To determine linear PDE stability of the multi-pulse solutions constructed in Theorem \ref{multiexist}, we look at the linearization of the PDE \cref{suspc} about $U_n(x)$, which is the quadratic operator polynomial $\calP_2(\lambda; U_n): H^4(\R, \C) \subset L^2(\R,\C) \rightarrow L^2(\R,\C)$ given by
+Now that we know about the existence of single and multiple pulses, we consider their spectral stability. To determine linear PDE stability of the multi-pulse solutions constructed in Theorem \ref{multiexist}, we look at the linearization of the PDE \cref{suspc} about $U_n(x)$, which is the quadratic operator polynomial 
+\revised{
+$\calP_2(\lambda; U_n): H^4(\R, \C) \subset L^2(\R,\C) \rightarrow L^2(\R,\C)$
+}
+given by
 \begin{equation}\label{quadeig}
 \calP_2(\lambda; U_n) = \calI \lambda^2 + \calA_1 \lambda + \calA_0(U_n)
 \end{equation}
@@ -3222,7 +3231,7 @@ Integrating by parts,
 \[
 \begin{aligned}
 -\frac{\vK_S(z)}{z}
-&= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) - \left( \langle \partial_xU, \partial_xU \rangle + 2c\langle \partial_c\partial_xU, \partial_xU\rangle \right)\vI_n\overline{z}^2\\
+&= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) - \left( \langle \partial_xU, \partial_xU \rangle + 2c\langle \partial_xU,\partial_c\partial_xU\rangle \right)\vI_n\overline{z}^2\\
 &\qquad + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3)  \\
 &= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) -\partial_c\left( c||\partial_xU||^2 \right) \vI_n \overline{z}^2  + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3) \\
 &= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) + d''(c) \vI_n \overline{z}^2  + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3),
