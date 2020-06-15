@@ -305,11 +305,16 @@ In its original formulation the Krein matrix was used to locate the spectrum of 
 
 \section{Introduction}\label{sec:intro}
 
-Herein we are generally concerned with the spectral stability of nonlinear traveling waves that arise as steady-states for nonlinear Hamiltonian systems that are either first-order or second-order in time.  There are two tools which we will use to study the spectrum of the linearization of these systems abut a nonlinear wave, namely the Hamiltonian-Krein index and the Krein matrix. The Hamiltonian-Krein index (HKI) relates the number of negative directions associated with the linearized energy to the number of (potentially) unstable point spectra (eigenvalues with positive real part). If the HKI is zero, then we prove that under some fairly generic assumptions the underlying wave will be orbitally stable. If the HKI is positive, then it provides an upper bound on the number of unstable point eigenvalues. If it can be shown, either analytically or numerically, that there are no eigenvalues with positive real part, then the HKI provides the number of purely imaginary eigenvalues with negative Krein signature for which the linearized energy is negative definite on the associated eigenspaces. These are the foundational eigenvalues associated with the Hamiltonian-Hopf bifurcation.
 
-The purely imaginary eigenvalues with negative Krein signature cannot be easily detected via a visual examination of the spectra. Krein matrices allow us to not only detect eigenvalues but to also determine the Krein signature of purely imaginary point eigenvalues. The Krein matrix has properties similar to those of the Evans matrix - in particular, the determinant being zero means that an eigenvalue has been found - except that it is meromorphic instead of being analytic.  By marrying the HKI with a spectral analysis via the Krein matrix one can locate all the point spectra associated with dynamical instabilities. We will illustrate the fruit of this marriage herein by considering two problems: the spectral stability associated with small spatially periodic waves, and the location and Krein signature of small eigenvalues associated with tail-tail interactions in $n$-pulses.
+Herein we are generally concerned with the spectral stability of waves that arise as steady-states for a nonlinear Hamiltonian system which is either first-order or second-order in time.  There are two tools which we will use to study the spectrum. The first is the Hamiltonian-Krein index (HKI), which relates the number of negative directions associated with the linearized energy to the number of (potentially) unstable point spectra (eigenvalues with positive real part).  If the HKI is zero, then under some fairly generic assumptions the underlying wave will be orbitally stable. If the HKI is positive, then it provides an upper bound on the number of unstable point eigenvalues. If it can be shown, either analytically or numerically, that there are no eigenvalues with positive real part, then the HKI provides the number of purely imaginary eigenvalues with negative Krein signature. These are the foundational eigenvalues associated with the Hamiltonian-Hopf bifurcation.
+\revised{In particular, the bifurcation can occur only if purely imaginary eigenvalues of opposite signature collide upon doing some type of parameter continuation. If it can be shown all the purely imaginary eigenvalues have positive signature, then a Hamiltonian-Hopf bifurcation is not possible. A formal definition of the signature in the setting of star-even polynomial operators is provided in equation \cref{e:defkrein}.}
 
-We now expand on the preceding preliminary discussion. The linearization of the Hamiltonian system will yield a star-even operator polynomial,
+Now, the purely imaginary eigenvalues with negative Krein signature cannot be easily detected via a visual examination of the spectra. Consequently, another tool is needed.
+Here we use the Krein matrix, an eigenvalue detecting tool which can also be used to determine the Krein signature of purely imaginary point eigenvalues. The Krein matrix has properties similar to those of the Evans matrix - in particular, the determinant being zero means that an eigenvalue has been found - except that it is meromorphic instead of being analytic.  By marrying the HKI with a spectral analysis via the Krein matrix one can locate all the point spectra associated with dynamical instabilities. We will illustrate the fruit of this marriage herein by considering two problems: the spectral stability associated with small spatially periodic waves, and the location and Krein signature of small eigenvalues associated with tail-tail interactions in $n$-pulses.
+
+
+
+We now flesh out this preliminary discussion. The linearization of the Hamiltonian system will yield a star-even operator polynomial,
 \[
 \calP_n(\lambda)\coloneqq\sum_{j=0}^n\lambda^j\calA_j.
 \]
@@ -370,11 +375,12 @@ The HKI also takes into account a subset of purely imaginary polynomial
 eigenvalues; namely, those with negative Krein signature. For each purely
 imaginary and nonzero eigenvalue, $\rmi\lambda_0$ with $\lambda_0\in\R$, with
 associated eigenspace $\E_{\rmi\lambda_0}$, set
-\[
+\begin{equation}\label{e:defkrein}
 k_\rmi^-(\rmi\lambda_0)=\rmn\left(-\lambda_0\left[\rmi P_n'(\rmi\lambda_0)\right]|_{\E_{\rmi\lambda_0}}\right).
-\]
+\end{equation}
 Here $\rmn(\vS)$ denotes the number of negative eigenvalues for the
-Hermitian matrix $\vS$, and $-\lambda_0\rmi P_n'(\rmi\lambda_0)|_{\E_{\rmi\lambda_0}}$ is the Hermitian matrix formed by the representation of the Hermitian operator
+Hermitian matrix $\vS$, and $-\lambda_0\rmi P_n'(\rmi\lambda_0)|_{\E_{\rmi\lambda_0}}$ is the Hermitian matrix
+formed by the representation of the Hermitian operator
 $-\rmi\lambda_0P_n'(\rmi\lambda_0)$ restricted to the eigenspace
 $\E_{\rmi\lambda_0}$. If the polynomial eigenvalue is simple with associated
 eigenvector $u_{\rmi\lambda_0}$, then
@@ -388,7 +394,6 @@ k_\rmi^-(\rmi\lambda_0)=
 \rmn\left(\langle\calA_0u_{\rmi\lambda_0},u_{\rmi\lambda_0}\rangle\right).
 \]
 See \cref{s:22} for more details.
-
 The nonnegative integer $k_\rmi^-(\rmi\lambda_0)$ is the negative Krein index
 associated with the purely imaginary eigenvalue. If
 $k_\rmi^-(\rmi\lambda_0)=0$, the polynomial eigenvalue is said to have
@@ -408,7 +413,8 @@ polynomial eigenvalues will have positive real part. This is the so-called Hamil
 should consult \cite[Chapter~7.1]{kapitula:sad13} for more details regarding
 the case of the collision of two simple polynomial  eigenvalues, and
 \cite{kapitula:tks10,vougalter:eoz06} for the case of higher-order
-collisions. The case of $n\ge2$ can be reformulated as an $n=1$ problem, see \cite{kapitula:iif13} and the references therein.
+collisions.
+The case of $n\ge2$ can be reformulated as an $n=1$ problem, see \cite{kapitula:iif13} and the references therein.
 Note that if $k_\rmi^-=0$, then no polynomial eigenvalues will leave the imaginary axis.
 
 The HKI is defined to be the sum of the three indices,
@@ -417,7 +423,8 @@ K_{\Ham}=k_\rmr+k_\rmc+k_\rmi^-.
 \]
 The HKI is intimately related to the operator coefficients.
 For the sake of exposition, first suppose $\calA_0,\calA_n$ are
-nonsingular. If $X=\C^N$, i.e., the operator is actually a star-even matrix polynomial with $nN$
+nonsingular.
+If $X=\C^N$, i.e., the operator is actually a star-even matrix polynomial with $nN$
 polynomial eigenvalues,
 \[
 K_{\Ham}=\begin{cases}
@@ -1072,10 +1079,11 @@ $0\le\mu\le1/2$; in particular, if
 $\lambda$ is an eigenvalue associated with $\mu$, then $\overline{\lambda}$
 is an eigenvalue associated with $-\mu$, see \cite[Section~4]{haragus:ots08}. For fixed $\mu$ the spectrum will be
 discrete, countable, and have an accumulation point only at $\infty$. The
-full spectrum, which is essential spectra only, will be the union of all the point spectra as $\mu$ is varied over the range.
+full spectrum, which is essential spectra only, will be the union of all the
+point spectra as $\mu$ is varied over the range.
 
-We are henceforth interested only in sideband instabilities, which are unstable spectra associated with nonzero $\mu$. Take $\mu>0$
-and set
+We are henceforth interested only in sideband instabilities, $\mu>0$.
+Set,
 \[
 \calA_0\coloneqq\calL_\mu-c_0+f'(U).
 \]
@@ -1170,10 +1178,10 @@ with negative Krein index, and the poles correspond to dispersion curves with
 positive Krein index. If the two curves intersect, then there is a collision
 of polynomial eigenvalues with opposite Krein signature. Consequently, for a small amplitude wave the intersection of a Krein eigenvalue with a (potentially) removable singularity of the Krein matrix can be noted
 without actually computing a Krein eigenvalue. This graphical
-approach towards spectral stability by looking at the dispersion curves is the one taken by \cite{deconinck:hfi16,kollar:dco19,trichtchenko:sop18}. The Krein matrix approach is more robust in the sense that it while it too is graphical in nature, it does not assume that the underlying waves have small amplitude.
+approach towards spectral stability by looking at the dispersion curves is the one taken by \cite{deconinck:hfi16,kollar:dco19,trichtchenko:sop18}. The Krein matrix approach is more robust in the sense that it while it too is graphical in nature, it does not necessarily assume that the underlying waves have small amplitude. \revised{In particular, the smallness assumption allows for an analytic construction of the matrix; however, if the wave has an $\calO(1)$ amplitude, then the Krein matrix can still be constructed numerically, and the graphical analysis will still hold for this numerically constructed matrix.}
 \end{remark}
 
-When $\epsilon=0$ the wave is spectrally stable, and all of the spectra is purely imaginary. For $\epsilon>0$ a spectral instability arises through the collision of a purely imaginary
+When $\epsilon=0$ the wave is spectrally stable, and all of the spectra is purely imaginary. For $\epsilon>0$ a spectral instability \revised{can arise for the small amplitude wave only} through the collision of a purely imaginary
 polynomial eigenvalue with positive Krein index and one with negative Krein
 index. This collision generically leads to a Hamiltonian-Hopf bifurcation,
 see \cite[Chapter~7.1.2]{kapitula:sad13} and the references therein. If for a fixed $\mu_0$ there is a polynomial eigenvalue
@@ -1375,9 +1383,11 @@ k_\rmr+k_\rmc+k_\rmi^-=\begin{cases}1,\quad&\mu_0<\mu<\mu_{\mathrm{ch}}\\
 2,\quad&\mu_{\mathrm{ch}}<\mu<1/2.\end{cases}
 \]
 If there are instability bubbles for the perturbed problem, there can be at most one for $\mu<\mu_{\mathrm{ch}}$, and at most two for $\mu_{\mathrm{ch}}<\mu<1/2$. For $0\le\mu<\mu_0$ a curve of unstable spectra may arise from the origin. We will not consider that here, but an example calculation for the KdV with general nonlinearity is provided in \cite[Section~4]{haragus:ots08}.
+
 \begin{remark}
 The transition point in the index, $\mu_{\mathrm{ch}}$, depends on $\epsilon$. For our purposes it is sufficient to consider how the number of instability bubbles depends on the change in $\rmn(\calA_0)$ between the two $\mu$-intervals without worrying about the precise boundary between the intervals.
 \end{remark}
+
 
 \begin{figure}[ht]%[tbp]
 \begin{center}
@@ -2226,6 +2236,7 @@ The function $\partial_c Y(x; c)$ is exponentially localized, i.e. for each $c \
 \begin{align}\label{Ycexploc}
 |\partial_c Y(x; c)| &\leq C e^{-(\alpha - \epsilon)|x|} && x \in \R.
 \end{align}
+
 \begin{proof}
 Fix $c \in (c_-, c_+)$. Since $Y(x; c)$ solves equation \cref{suspsystem}, $Y(x; c) \in C^1(\R, \R^4)$. Differentiating \cref{suspsystem} with respect to $c$, which we can do by \cref{lemma:cinterval}, we have
 \begin{equation}\label{Ycprime}
@@ -2274,13 +2285,11 @@ Then $U(x; c)$ is an even function and is an exponentially localized traveling w
 
 \subsection{Existence of pulses}
 
-First, we look at the existence of such pulses. The linearization of \cref{eqODE} about a given solution $U_*$ of \cref{eqODE} is the operator 
-$\calA_0(U^*): H^4(\R) \subset L^2(\R) \mapsto L^2(\R)$
-, given by
+First, we look at the existence of such pulses. The linearization of \cref{eqODE} about a given solution $U_*$ of \cref{eqODE} is the operator $\calA_0(U^*): H^4(\R) \subset L^2(\R) \mapsto L^2(\R)$, given by
 \begin{equation}\label{defA0}
 \calA_0(U^*) = \partial_x^4 + c^2 \partial_x^2 + \rme^{U_*}.
 \end{equation}
-It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the point spectrum of $\calA_0(U)$, which is supported by our numerical analysis.
+It follows from \cref{lemma:cinterval} that $\calA_0(U)$ has a one-dimensional kernel spanned by $\partial_x U(x)$. Since $\calA_0(U)$ is self-adjoint, its spectrum is real. We take the following additional hypothesis concerning the point spectrum of $\calA_0(U)$.
 
 \begin{hypothesis}\label{A0hyp}
 The following hold concerning the spectrum of $\calA_0(U)$.
@@ -2289,6 +2298,7 @@ The following hold concerning the spectrum of $\calA_0(U)$.
 \item There exists $\delta_0 > 0$ such that the only spectrum of $\calA_0(U)$ in $(-\infty, \delta_0)$ is two simple eigenvalues at $0$ and $\lambda_-$.
 \end{enumerate}
 \end{hypothesis}
+
 
 We now have the following theorem, which is adapted from \cite[Theorem~3.6]{sandstede:iol97}.
 In all that follows, the norm $||\cdot||_\infty$ is the supremum norm on $C(\R)$, $\langle \cdot, \cdot \rangle$ is the inner product on $L^2(\R)$, and $|| \cdot ||$ is the norm on $L^2(\R)$ induced from the inner product.
@@ -2352,14 +2362,12 @@ Using \cref{specA00}, the Hamiltonian \cref{suspH}, the fact that the kernel is 
 and the fact that the Melnikov integral $M = \int_{-\infty}^\infty (\partial_x U)^2\,\rmd x$ is positive, (a) follows from \cite[Theorem~3.6]{sandstede:iol97}, except for the bound on $r(x)$ and its derivatives with respect to $x$, which follows from \cite{Sanstede1993} and \cite{sandstede:som98}. All eigenvalues are real since $\calA_0(U_n)$ is self-adjoint on $L^2(\R)$.  From Hypothesis \ref{Uexistshyp} and Hypothesis \ref{A0hyp}, $\calA_0(U)$ has a simple eigenvalue at 0 and a simple negative eigenvalue at $\lambda_-$. It follows from \cite{alexander:ati90} that $\calA_0(U_n)$ has $n$ eigenvalues near 0 and $n$ negative eigenvalues near $\lambda_-$. This proves the eigenvalue count on $(-\infty, \delta_0)$ and part (b2). Part (b1) follows from \cite{sandstede:som98}. We can verify directly that $\calA_0(U_n)\partial_x U_n = 0$. Part (c) follows from the Weyl Essential Spectrum Theorem \cite[Theorem~2.2.6]{kapitula:sad13} and \cite[Theorem~3.1.11]{kapitula:sad13}, since $\calA_0(U_n)$ is exponentially asymptotic to $\calA_0(0)$.
 \end{proof}
 
-\begin{remark}$\calA_0(U)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
+\begin{remark}$\calA_0(U_n)$ may in fact have additional eigenvalues $\lambda$ with $\lambda > \delta_0 > 0$, but these do not matter for the analysis. Our numerical analysis suggests that there are in fact no additional eigenvalues.
 \end{remark}
 
 \subsection{Stability of pulses}
 
-Now that we know about the existence of single and multiple pulses, we consider their spectral stability. To determine linear PDE stability of the multi-pulse solutions constructed in Theorem \ref{multiexist}, we look at the linearization of the PDE \cref{suspc} about $U_n(x)$, which is the quadratic operator polynomial 
-$\calP_2(\lambda; U_n): H^4(\R, \C) \subset L^2(\R,\C) \rightarrow L^2(\R,\C)$
-given by
+Now that we know about the existence of single and multiple pulses, we consider their spectral stability. To determine linear PDE stability of the multi-pulse solutions constructed in Theorem \ref{multiexist}, we look at the linearization of the PDE \cref{suspc} about $U_n(x)$, which is the quadratic operator polynomial $\calP_2(\lambda; U_n): H^4(\R, \C) \subset L^2(\R,\C) \rightarrow L^2(\R,\C)$ given by
 \begin{equation}\label{quadeig}
 \calP_2(\lambda; U_n) = \calI \lambda^2 + \calA_1 \lambda + \calA_0(U_n)
 \end{equation}
@@ -2732,6 +2740,8 @@ and
 \begin{equation}\label{expsepbound2}
 |\langle U_-(x), U_+(x) \rangle |\leq C \rme^{-(3 \alpha/2) X}.
 \end{equation}
+\end{lemma}
+
 \begin{proof}
 Without loss of generality, let $U_\pm(x)$ be exponentially localized peaks centered at $\pm X$, thus $|U_-(x)| \leq C e^{-\alpha|x + X|}$ and $|U_+(x)| \leq C \rme^{-\alpha|x - X|}$. For $x \in (-\infty, -X]$,
 \begin{align}\label{endprodbound}
@@ -2762,7 +2772,6 @@ For the second integral, we use \cref{middleprodbound} to get
 \end{align*}
 The third and fourth integrals are similar. Combining these, we obtain \cref{expsepbound2}.
 \end{proof}
-\end{lemma}
 
 \begin{remark}
 If the hypotheses of \cref{expseplemma} are satisfied, we say that $U_+(x)$ and $U_-(x)$ are exponentially separated by $2X$.
@@ -3093,7 +3102,7 @@ Integrating by parts,
 \[
 \begin{aligned}
 -\frac{\vK_S(z)}{z}
-&= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) - \left( \langle \partial_xU, \partial_xU \rangle + 2c\langle \partial_xU,\partial_c\partial_xU\rangle \right)\vI_n\overline{z}^2\\
+&= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) - \left( \langle \partial_xU, \partial_xU \rangle + 2c\langle \partial_c\partial_xU, \partial_xU\rangle \right)\vI_n\overline{z}^2\\
 &\qquad + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3)  \\
 &= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) -\partial_c\left( c||\partial_xU||^2 \right) \vI_n \overline{z}^2  + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3) \\
 &= \|\partial_xU\|^2 \text{diag}(\nu_1, \dots, \nu_n) + d''(c) \vI_n \overline{z}^2  + \mathcal{O}(\rme^{-(3 \alpha/2) X_{\mathrm{min}}}|z| + |z|^3),
